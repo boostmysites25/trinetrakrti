@@ -11,7 +11,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -21,51 +21,50 @@ const Header = () => {
         setScrolled(false);
       }
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
-    <div className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-      scrolled 
-        ? "bg-white/80 backdrop-blur-md shadow-md" 
-        : "bg-white/50 backdrop-blur-sm"
-    } text-primary`}>
+    <div
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-md shadow-md"
+          : "bg-white/50 backdrop-blur-sm"
+      } text-primary`}
+    >
       {/* Decorative header line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#BBA84E50] to-transparent"></div>
-      
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#f4c30050] to-transparent"></div>
+
       <div className="flex wrapper items-center gap-8 justify-between relative">
         {/* Animated circuit pattern */}
         <div className="absolute inset-0 ai-circuit-bg opacity-5"></div>
-        
-        <Link
-          to="/"
-          className="cursor-pointer relative"
-        >
+
+        <Link to="/" className="cursor-pointer relative">
           {/* Logo glow effect */}
-          <div className="absolute -inset-1 bg-[#BBA84E20] rounded-full filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
+          <div className="absolute -inset-1 bg-[#f4c30020] rounded-full filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
           <img
             loading="lazy"
             src={logo}
             alt="logo"
             width="auto"
             height="auto"
-            className="h-[5rem] md:h-[6.5rem] object-contain relative z-10"
+            className="h-[5rem] lg:h-[7rem] object-contain relative z-10"
           />
         </Link>
-        
-        <div className="hidden md:flex items-center gap-10">
+
+        <div className="hidden lg:flex items-center gap-10">
           {websitePagesLinks.map((item, index) => (
             <Link
               className={`${
-                pathname === item.link 
-                  ? "text-[#BBA84E] font-medium" 
-                  : "text-gray-700 hover:text-[#BBA84E]"
+                pathname === item.link
+                  ? "text-[#f4c300] font-medium"
+                  : "text-gray-700 hover:text-[#f4c300]"
               } text-sm cursor-pointer transition-all duration-300 relative group overflow-hidden`}
               key={item.id}
               to={item.link}
@@ -73,28 +72,28 @@ const Header = () => {
             >
               {/* Underline animation */}
               <span className="relative z-10">{item.label}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#BBA84E] group-hover:w-full transition-all duration-300"></span>
-              
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#f4c300] group-hover:w-full transition-all duration-300"></span>
+
               {/* Active indicator */}
               {pathname === item.link && (
-                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#BBA84E] ai-pulse"></span>
+                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#f4c300] ai-pulse"></span>
               )}
             </Link>
           ))}
-          
+
           {/* AI indicator */}
-          <div className="flex items-center gap-1 text-xs text-[#BBA84E] bg-[#BBA84E10] px-3 py-1 rounded-full border border-[#BBA84E30]">
+          <div className="flex items-center gap-1 text-xs text-[#f4c300] bg-[#f4c30010] px-3 py-1 rounded-full border border-[#f4c30030]">
             <RiRobot2Line className="text-sm ai-pulse" />
             <span>AI Powered</span>
           </div>
         </div>
-        
+
         <div
           className="block lg:hidden justify-self-end relative z-10"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Hamburger
-            color="#BBA84E"
+            color="#f4c300"
             size="26"
             toggled={isOpen}
             rounded
@@ -102,7 +101,7 @@ const Header = () => {
           />
         </div>
       </div>
-      
+
       <Drawer
         open={isOpen}
         onClose={() => setIsOpen(false)}
@@ -111,46 +110,35 @@ const Header = () => {
       >
         {/* Drawer background pattern */}
         <div className="absolute inset-0 ai-dots-bg opacity-10"></div>
-        
-        <div className="mb-6 flex items-center justify-between pr-[.7rem] py-[.4rem] relative">
-          <img
-            src={logo}
-            width="auto"
-            height="auto"
-            alt="logo"
-            className="h-[2.5rem] object-contain"
-          />
+
+        <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem] relative">
           <button
             onClick={() => setIsOpen(false)}
-            className="text-[#BBA84E] text-[2.2rem] hover:rotate-90 transition-all duration-300"
+            className="text-[#f4c300] text-[2.2rem] hover:rotate-90 transition-all duration-300"
           >
             <IoMdClose />
           </button>
         </div>
-        
+
         <div className="py-4 px-7 flex flex-col gap-4 ai-stagger">
           {websitePagesLinks.map(({ label, link, id }, index) => (
             <Link
               onClick={() => setIsOpen(false)}
               key={id}
               className={`${
-                pathname === link 
-                  ? "text-[#BBA84E] font-medium" 
+                pathname === link
+                  ? "text-[#f4c300] font-medium"
                   : "text-gray-700"
               } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 ai-reveal from-right`}
               to={link}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {pathname === link && <span className="w-2 h-2 rounded-full bg-[#BBA84E] ai-pulse"></span>}
+              {pathname === link && (
+                <span className="w-2 h-2 rounded-full bg-[#f4c300] ai-pulse"></span>
+              )}
               {label}
             </Link>
           ))}
-          
-          {/* AI indicator in mobile menu */}
-          <div className="flex items-center gap-2 text-sm text-[#BBA84E] bg-[#BBA84E10] px-4 py-2 rounded-full border border-[#BBA84E30] self-start mt-4">
-            <RiRobot2Line className="text-lg ai-pulse" />
-            <span>AI Powered Solutions</span>
-          </div>
         </div>
       </Drawer>
     </div>

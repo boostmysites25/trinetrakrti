@@ -24,10 +24,10 @@ const Header = () => {
             alt="logo"
             width="auto"
             height="auto"
-            className="h-[5rem] md:h-[6.5rem] object-contain"
+            className="h-[5rem] lg:h-[7rem] object-contain"
           />
         </ReactScrollLink>
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10">
           {landingPageNavLinks.map((item) => {
             return item.link.includes("/") ? (
               <Link
@@ -72,14 +72,7 @@ const Header = () => {
         direction="right"
         className="z-10 p-2"
       >
-        <div className="mb-6 flex items-center justify-between pr-[.7rem] py-[.4rem]">
-          <img
-            width="auto"
-            height="auto"
-            src={logo}
-            alt="logo"
-            className="h-[2.5rem] object-contain"
-          />
+        <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
           <button
             onClick={() => setIsOpen(false)}
             className="text-primary text-[2.2rem]"
@@ -91,7 +84,7 @@ const Header = () => {
           {landingPageNavLinks.map(({ label, link, id }) => {
             return link.includes("/") ? (
               <Link
-                className="text-sm cursor-pointer text-gray-800 hover:text-primary transition-all duration-300"
+                className="text-2xl font-mediumduration-300 link"
                 key={id}
                 to={link}
               >

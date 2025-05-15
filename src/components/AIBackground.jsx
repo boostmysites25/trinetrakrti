@@ -35,7 +35,7 @@ const AIBackground = ({ children, className = "", intensity = "light" }) => {
           speedX: (Math.random() - 0.5) * 0.5,
           speedY: (Math.random() - 0.5) * 0.5,
           opacity: Math.random() * 0.5 + 0.1,
-          color: Math.random() > 0.5 ? '#BBA84E' : '#DCDFE0'
+          color: Math.random() > 0.5 ? '#f4c300' : '#DCDFE0'
         });
       }
     };
@@ -92,7 +92,7 @@ const AIBackground = ({ children, className = "", intensity = "light" }) => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(mousePosition.x, mousePosition.y);
-            ctx.strokeStyle = '#BBA84E' + Math.floor((0.3 - distance / 500) * 255).toString(16).padStart(2, '0');
+            ctx.strokeStyle = '#f4c300' + Math.floor((0.3 - distance / 500) * 255).toString(16).padStart(2, '0');
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

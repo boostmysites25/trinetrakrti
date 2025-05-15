@@ -3,6 +3,7 @@ import bannerImg from "../../assets/images/landingpages/banner-bg.webp";
 import robot from "../../assets/images/landingpages/ai-robot.png";
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import { Typewriter } from "react-simple-typewriter";
 
 const Banner = ({ page }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -82,7 +83,7 @@ const Banner = ({ page }) => {
       {/* Glowing orb */}
       <div className="absolute top-1/3 right-1/3 w-8 h-8 rounded-full bg-secondary/30 ai-pulse"></div>
 
-      <div className="wrapper pt-[10rem] pb-[5rem] flex flex-col-reverse lg:grid grid-cols-[60%_40%] items-center gap-5 relative z-10">
+      <div className="wrapper w-full pt-[10rem] pb-[5rem] flex flex-col-reverse lg:grid grid-cols-[60%_40%] items-center gap-5 relative z-10">
         <div className="flex flex-col gap-6 items-start justify-center">
           <div data-aos="fade-right" className="ai-decorative-line">
             <h6 className="font-medium text-secondary ai-gradient-text">
@@ -95,12 +96,19 @@ const Banner = ({ page }) => {
             className="text-[2.5rem] md:text-5xl font-bold leading-tight relative"
           >
             <span className="relative inline-block">
-              <span className="relative z-10">TrinetraKrti</span>
-              <span className="absolute -bottom-1 left-0 w-full h-2 bg-secondary/20"></span>
+              <span className="relative z-10">TrinetraKrti - </span>
             </span>
-            {isWeb
-              ? " - Empowering Businesses with Innovative Web Solutions"
-              : " - Delivering Seamless Mobile Experiences for Your Users"}
+            <span className="ai-gradient-text !font-bold">
+              <Typewriter
+                delaySpeed={2000}
+                words={[
+                  isWeb
+                    ? " Empowering Businesses with Innovative Web Solutions"
+                    : " Delivering Seamless Mobile Experiences for Your Users",
+                ]}
+                loop
+              />
+            </span>
           </h1>
 
           <p

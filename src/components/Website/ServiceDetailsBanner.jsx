@@ -71,7 +71,7 @@ const ServiceDetailsBanner = () => {
         
         // Thinner borders on mobile
         const borderWidth = isMobile ? '0.5px' : '1px';
-        particle.style.border = `${borderWidth} solid ${Math.random() > 0.5 ? '#BBA84E40' : '#DCDFE040'}`;
+        particle.style.border = `${borderWidth} solid ${Math.random() > 0.5 ? '#f4c30040' : '#DCDFE040'}`;
         
         particle.style.left = `${posX}%`;
         particle.style.top = `${posY}%`;
@@ -115,7 +115,7 @@ const ServiceDetailsBanner = () => {
       <div ref={particlesRef} className="absolute h-full w-full z-[1]"></div>
       
       {/* Decorative elements - optimized for mobile */}
-      <div className="absolute top-3 left-3 sm:top-5 md:top-10 sm:left-5 md:left-10 w-16 sm:w-20 md:w-32 h-16 sm:h-20 md:h-32 border border-[#BBA84E] rounded-full opacity-10 ai-pulse"></div>
+      <div className="absolute top-3 left-3 sm:top-5 md:top-10 sm:left-5 md:left-10 w-16 sm:w-20 md:w-32 h-16 sm:h-20 md:h-32 border border-[#f4c300] rounded-full opacity-10 ai-pulse"></div>
       <div className="absolute bottom-3 right-3 sm:bottom-5 md:bottom-10 sm:right-5 md:right-10 w-16 sm:w-24 md:w-40 h-16 sm:h-24 md:h-40 border border-[#DCDFE0] rounded-full opacity-10 ai-pulse" style={{ animationDelay: '1s' }}></div>
       
       {/* Content container with better mobile positioning */}
@@ -128,11 +128,11 @@ const ServiceDetailsBanner = () => {
           <div className="w-full flex flex-col items-center mb-4 sm:mb-6">
             {/* Icon with glow effect */}
             <div className="relative mb-4 sm:mb-5">
-              <div className="absolute w-20 h-20 rounded-full bg-[#BBA84E30] filter blur-lg ai-pulse"></div>
+              <div className="absolute w-20 h-20 rounded-full bg-[#f4c30030] filter blur-lg ai-pulse"></div>
               <img 
                 src={service?.icon} 
                 alt={title} 
-                className="w-16 h-16 sm:w-20 sm:h-20 object-contain relative z-10 p-2 sm:p-3 bg-[#00000040] rounded-full border border-[#BBA84E40]" 
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain relative z-10 p-2 sm:p-3 bg-[#00000040] rounded-full border border-[#f4c30040]" 
               />
             </div>
             
@@ -143,7 +143,7 @@ const ServiceDetailsBanner = () => {
               data-text={title}
             >
               {title}
-              <span className="absolute -bottom-3 left-0 right-0 mx-auto w-[100px] sm:w-[150px] h-[3px] bg-[#BBA84E] ai-shimmer"></span>
+              <span className="absolute -bottom-3 left-0 right-0 mx-auto w-[100px] sm:w-[150px] h-[3px] bg-[#f4c300] ai-shimmer"></span>
             </h1>
           </div>
           
@@ -155,13 +155,13 @@ const ServiceDetailsBanner = () => {
           {/* Breadcrumbs - improved for all screen sizes */}
           <div
             data-aos="fade-up"
-            className="text-sm sm:text-base font-medium px-4 sm:px-5 py-2 sm:py-3 w-fit flex flex-wrap justify-center text-white items-center gap-2 sm:gap-3 bg-[#00000080] backdrop-blur-sm rounded-full border border-[#BBA84E30] shadow-lg"
+            className="text-sm sm:text-base font-medium px-4 sm:px-5 py-2 sm:py-3 w-fit flex flex-wrap justify-center text-white items-center gap-2 sm:gap-3 bg-[#00000080] backdrop-blur-sm rounded-full border border-[#f4c30030] shadow-lg"
           >
-            <Link to="/" className="hover:text-[#BBA84E] transition-colors duration-300">Home</Link>
-            <FiArrowRight className="text-[#BBA84E] text-xs sm:text-sm" />
-            <Link to="/services" className="hover:text-[#BBA84E] transition-colors duration-300">Services</Link>
-            <FiArrowRight className="text-[#BBA84E] text-xs sm:text-sm" />
-            <span className="text-[#BBA84E] font-bold truncate max-w-[120px] sm:max-w-none">{title}</span>
+            <Link to="/" className="hover:text-[#f4c300] transition-colors duration-300">Home</Link>
+            <FiArrowRight className="text-[#f4c300] text-xs sm:text-sm" />
+            <Link to="/services" className="hover:text-[#f4c300] transition-colors duration-300">Services</Link>
+            <FiArrowRight className="text-[#f4c300] text-xs sm:text-sm" />
+            <span className="text-[#f4c300] font-bold truncate max-w-[120px] sm:max-w-none">{title}</span>
           </div>
         </div>
       </div>

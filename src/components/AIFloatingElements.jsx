@@ -28,7 +28,7 @@ const AIFloatingElements = ({ count = 10, className = "" }) => {
       element.style.width = `${size}px`;
       element.style.height = `${size}px`;
       element.style.borderRadius = isCircle ? '50%' : '0';
-      element.style.border = `1px solid ${isGold ? '#BBA84E20' : '#DCDFE020'}`;
+      element.style.border = `1px solid ${isGold ? '#f4c30020' : '#DCDFE020'}`;
       element.style.left = `${posX}%`;
       element.style.top = `${posY}%`;
       element.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
@@ -39,8 +39,8 @@ const AIFloatingElements = ({ count = 10, className = "" }) => {
       if (Math.random() > 0.8) {
         // Create a circuit-like pattern
         element.style.backgroundImage = `
-          radial-gradient(circle at center, ${isGold ? '#BBA84E10' : '#DCDFE010'} 0%, transparent 70%),
-          linear-gradient(to right, transparent 49%, ${isGold ? '#BBA84E20' : '#DCDFE020'} 50%, transparent 51%)
+          radial-gradient(circle at center, ${isGold ? '#f4c30010' : '#DCDFE010'} 0%, transparent 70%),
+          linear-gradient(to right, transparent 49%, ${isGold ? '#f4c30020' : '#DCDFE020'} 50%, transparent 51%)
         `;
         element.style.backgroundSize = '100% 100%, 10px 10px';
       }
@@ -65,7 +65,7 @@ const AIFloatingElements = ({ count = 10, className = "" }) => {
       hexagon.style.width = `${size}px`;
       hexagon.style.height = `${size}px`;
       hexagon.style.clipPath = 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)';
-      hexagon.style.border = `1px solid ${isGold ? '#BBA84E30' : '#DCDFE030'}`;
+      hexagon.style.border = `1px solid ${isGold ? '#f4c30030' : '#DCDFE030'}`;
       hexagon.style.left = `${posX}%`;
       hexagon.style.top = `${posY}%`;
       hexagon.style.animation = `float ${duration}s ease-in-out ${delay}s infinite, rotate ${duration * 2}s linear ${delay}s infinite`;

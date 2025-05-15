@@ -78,7 +78,7 @@
   
   /* Ensure particles and decorative elements don't overwhelm mobile UI */
   .ai-hexagon, .ai-float {
-    opacity: 0.1 !important;
+    /* opacity: 0.1 !important; */
   }
   
   /* Improve banner visibility on mobile */
