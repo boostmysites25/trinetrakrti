@@ -136,7 +136,7 @@ const Home = () => {
                 itemProp="headline"
               >
                 Transforming Businesses with Cutting-edge AI Technology
-                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-[3px] bg-gradient-to-r from-transparent via-[#f4c300] to-transparent ai-shimmer"></span>
+                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-[3px] bg-gradient-to-r from-transparent via-[#C7AC5F] to-transparent ai-shimmer"></span>
               </h1>
               <p
                 data-aos="fade-up"
@@ -159,7 +159,7 @@ const Home = () => {
                 ].map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-[#f4c30020] ai-reveal"
+                    className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-[#C7AC5F20] ai-reveal"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <span className="text-lg">{benefit.icon}</span>
@@ -225,7 +225,7 @@ const Home = () => {
             <div className="absolute inset-0 ai-dots-bg opacity-10"></div>
 
             {/* Decorative elements */}
-            <div className="absolute top-10 right-10 w-20 h-20 ai-hexagon border border-[#f4c30030] opacity-20 ai-rotate"></div>
+            <div className="absolute top-10 right-10 w-20 h-20 ai-hexagon border border-[#C7AC5F30] opacity-20 ai-rotate"></div>
             <div
               className="absolute bottom-20 left-10 w-16 h-16 ai-hexagon border border-[#DCDFE030] opacity-20 ai-rotate"
               style={{ animationDirection: "reverse" }}
@@ -233,7 +233,7 @@ const Home = () => {
 
             <div className="flex flex-col gap-3 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-2">
-                <div className="w-10 h-[1px] bg-gradient-to-r from-transparent to-[#f4c300] ai-shimmer"></div>
+                <div className="w-10 h-[1px] bg-gradient-to-r from-transparent to-[#C7AC5F] ai-shimmer"></div>
                 <h2
                   data-aos="fade-up"
                   className="heading text-center ai-gradient-text"
@@ -241,7 +241,7 @@ const Home = () => {
                 >
                   Industry-Specific AI Solutions
                 </h2>
-                <div className="w-10 h-[1px] bg-gradient-to-l from-transparent to-[#f4c300] ai-shimmer"></div>
+                <div className="w-10 h-[1px] bg-gradient-to-l from-transparent to-[#C7AC5F] ai-shimmer"></div>
               </div>
               <p
                 data-aos="fade-up"
@@ -290,7 +290,7 @@ const Home = () => {
                       itemProp="name"
                     >
                       {item.title}
-                      <span className="block w-0 h-[2px] bg-[#f4c300] mx-auto group-hover:w-1/2 transition-all duration-500"></span>
+                      <span className="block w-0 h-[2px] bg-[#C7AC5F] mx-auto group-hover:w-1/2 transition-all duration-500"></span>
                     </h3>
                     <p
                       className="text-gray-800 text-md mt-3 relative z-10 group-hover:text-white transition-all duration-300 text-center"
@@ -301,7 +301,7 @@ const Home = () => {
                   </div>
 
                   {/* Tech indicators */}
-                  <div className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#f4c30010] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#C7AC5F10] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg
                       className="w-4 h-4 text-white"
                       fill="none"
@@ -329,7 +329,7 @@ const Home = () => {
                   id="development-process"
                 >
                   Our AI Development Process
-                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#f4c300]/20"></span>
+                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#C7AC5F]/20"></span>
                 </h2>
                 <p className="max-w-3xl mx-auto mt-4 text-gray-700">
                   We follow a structured, collaborative approach to AI
@@ -366,7 +366,7 @@ const Home = () => {
                   data-aos="fade-right"
                 >
                   {/* Decorative tech elements */}
-                  <div className="absolute -top-5 -left-5 w-16 h-16 border border-[#f4c30030] rounded-full opacity-20 ai-float"></div>
+                  <div className="absolute -top-5 -left-5 w-16 h-16 border border-[#C7AC5F30] rounded-full opacity-20 ai-float"></div>
                   <div
                     className="absolute -bottom-5 -right-5 w-12 h-12 border border-[#DCDFE030] rounded-full opacity-20 ai-float"
                     style={{ animationDelay: "1.5s" }}
@@ -412,7 +412,7 @@ const Home = () => {
                     itemProp="name"
                   >
                     Pioneering AI Innovation
-                    <span className="absolute -bottom-2 left-0 w-1/3 h-[3px] bg-[#f4c300] ai-shimmer"></span>
+                    <span className="absolute -bottom-2 left-0 w-1/3 h-[3px] bg-[#C7AC5F] ai-shimmer"></span>
                   </h2>
 
                   <p
@@ -455,12 +455,12 @@ const Home = () => {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="p-4 bg-[#f4c30010] rounded-lg border border-[#f4c30020] ai-reveal"
+                        className="p-4 bg-[#C7AC5F10] rounded-lg border border-[#C7AC5F20] ai-reveal"
                         style={{ animationDelay: `${index * 0.2}s` }}
                       >
                         <div className="flex items-center gap-2 mb-2">
                           <svg
-                            className="w-5 h-5 text-[#f4c300]"
+                            className="w-5 h-5 text-[#C7AC5F]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -608,11 +608,11 @@ const Home = () => {
                       className="font-semibold text-lg flex items-center gap-2 mb-3"
                       itemProp="name"
                     >
-                      <span className="text-[#f4c300]">Q:</span> {faq.q}
+                      <span className="text-[#C7AC5F]">Q:</span> {faq.q}
                     </h3>
                     <div itemScope itemType="https://schema.org/Answer">
                       <p 
-                        className="text-gray-700 pl-6 border-l-2 border-[#f4c30030]"
+                        className="text-gray-700 pl-6 border-l-2 border-[#C7AC5F30]"
                         itemProp="text"
                       >
                         {faq.a}
@@ -650,7 +650,7 @@ const Home = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   to="/contact" 
-                  className="px-8 py-3 bg-[#f4c300] text-white rounded-md hover:bg-[#f4c300]/80 transition-all duration-300 flex items-center gap-2"
+                  className="px-8 py-3 bg-[#C7AC5F] text-white rounded-md hover:bg-[#C7AC5F]/80 transition-all duration-300 flex items-center gap-2"
                 >
                   <span>Start Your AI Journey</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -673,7 +673,7 @@ const Home = () => {
         {/* Back to top button */}
         {/* <button 
           onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-          className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#f4c300] text-white flex items-center justify-center shadow-lg hover:bg-[#f4c300]/80 transition-all duration-300 z-50"
+          className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#C7AC5F] text-white flex items-center justify-center shadow-lg hover:bg-[#C7AC5F]/80 transition-all duration-300 z-50"
           aria-label="Back to top"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

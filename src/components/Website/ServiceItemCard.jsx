@@ -13,15 +13,15 @@ const ServiceItemCard = ({ item }) => {
       
       {/* Glowing border effect on hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#f4c30050] to-[#DCDFE050] rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C7AC5F50] to-[#DCDFE050] rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
       </div>
       
       <div className="flex flex-col gap-4 items-start relative z-10">
         <div className="relative">
           {/* Glowing circle behind icon */}
-          <div className="absolute inset-0 rounded-full bg-[#f4c30020] filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
+          <div className="absolute inset-0 rounded-full bg-[#C7AC5F20] filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
           
-          <div className="group-hover:scale-[120%] transition-all duration-300 w-[4rem] h-[4rem] p-3 rounded-full bg-[#f4c30010] flex items-center justify-center relative z-10 ai-float">
+          <div className="group-hover:scale-[120%] transition-all duration-300 w-[4rem] h-[4rem] p-3 rounded-full bg-[#C7AC5F10] flex items-center justify-center relative z-10 ai-float">
             <img
               width="75"
               height="75"
@@ -33,7 +33,7 @@ const ServiceItemCard = ({ item }) => {
           </div>
           
           {/* Animated rings */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-[#f4c30030] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ai-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-[#C7AC5F30] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ai-pulse"></div>
         </div>
         
         <div className="space-y-2">
@@ -53,7 +53,7 @@ const ServiceItemCard = ({ item }) => {
         
         <Link
           to={item.link}
-          className="text-[#f4c300] group-hover:text-white transition-all duration-300 text-md flex gap-2 items-center"
+          className="text-[#C7AC5F] group-hover:text-white transition-all duration-300 text-md flex gap-2 items-center"
         >
           <span className="group-hover:translate-x-1 transition-transform duration-300">Know More</span> 
           <PiCaretDoubleRightBold className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -61,8 +61,8 @@ const ServiceItemCard = ({ item }) => {
       </div>
       
       {/* Tech indicator */}
-      <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-[#f4c30010] border border-[#f4c30030] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <svg className="w-3 h-3 text-[#f4c300] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-[#C7AC5F10] border border-[#C7AC5F30] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <svg className="w-3 h-3 text-[#C7AC5F] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
       </div>

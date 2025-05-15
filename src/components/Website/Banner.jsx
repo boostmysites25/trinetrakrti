@@ -7,7 +7,6 @@ import AIBackground from "../../components/AIBackground";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
-  const titleRef = useRef(null);
   const robotRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -22,16 +21,6 @@ const Banner = () => {
       yoyo: true,
     });
 
-    // Typing animation for title
-    if (titleRef.current) {
-      setTimeout(() => {
-        titleRef.current.classList.add("ai-typing");
-        setTimeout(() => {
-          titleRef.current.classList.remove("ai-typing");
-        }, 4000);
-      }, 1000);
-    }
-
     // Parallax effect on mouse move
     const handleMouseMove = (e) => {
       if (!containerRef.current || !robotRef.current) return;
@@ -45,8 +34,8 @@ const Banner = () => {
 
       // Apply subtle movement to robot
       gsap.to(robotElement, {
-        x: mouseX * 0.02,
-        y: mouseY * 0.02,
+        x: mouseX * 0.1,
+        y: mouseY * 0.1,
         duration: 0.5,
         ease: "power1.out",
       });
@@ -72,12 +61,12 @@ const Banner = () => {
       <AIBackground intensity="medium" className="absolute inset-0" />
 
       {/* Decorative elements */}
-      <div className="absolute top-20 left-20 w-40 h-40 border border-[#f4c30030] rounded-full opacity-20 ai-float"></div>
+      <div className="absolute top-20 left-20 w-40 h-40 border border-[#C7AC5F30] rounded-full opacity-20 ai-float"></div>
       <div
         className="absolute bottom-20 right-20 w-60 h-60 border border-[#DCDFE030] rounded-full opacity-20 ai-float"
         style={{ animationDelay: "1.5s" }}
       ></div>
-      <div className="absolute top-1/3 right-1/4 w-20 h-20 ai-hexagon border border-[#f4c30030] opacity-20 ai-rotate"></div>
+      <div className="absolute top-1/3 right-1/4 w-20 h-20 ai-hexagon border border-[#C7AC5F30] opacity-20 ai-rotate"></div>
 
       {/* Circuit-like grid pattern */}
       <div className="absolute inset-0 ai-grid-bg opacity-10"></div>
@@ -86,9 +75,9 @@ const Banner = () => {
         <div className="flex flex-col gap-6 items-start justify-center">
           <div
             data-aos="fade-right"
-            className="bg-[#f4c30010] px-4 py-2 text-[#f4c300] text-sm rounded-full border border-[#f4c30030] flex items-center gap-2 ai-shimmer"
+            className="bg-[#C7AC5F10] px-4 py-2 text-[#C7AC5F] text-sm rounded-full border border-[#C7AC5F30] flex items-center gap-2 ai-shimmer"
           >
-            <span className="w-2 h-2 rounded-full bg-[#f4c300] ai-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
             <span>AI-Powered IT Services</span>
           </div>
 
@@ -105,7 +94,7 @@ const Banner = () => {
                 loop
               />
             </span>
-            <span className="absolute -bottom-2 left-0 w-1/3 h-[3px] bg-gradient-to-r from-[#f4c300] to-transparent ai-shimmer"></span>
+            <span className="absolute -bottom-2 left-0 w-1/3 h-[3px] bg-gradient-to-r from-[#C7AC5F] to-transparent ai-shimmer"></span>
           </h1>
 
           <p
@@ -125,9 +114,9 @@ const Banner = () => {
             className="grid grid-cols-2 gap-4 mt-4 w-full max-w-xl"
           >
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#f4c30010] flex items-center justify-center border border-[#f4c30030]">
+              <div className="w-8 h-8 rounded-full bg-[#C7AC5F10] flex items-center justify-center border border-[#C7AC5F30]">
                 <svg
-                  className="w-4 h-4 text-[#f4c300]"
+                  className="w-4 h-4 text-[#C7AC5F]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -144,9 +133,9 @@ const Banner = () => {
               <span className="text-sm">Advanced AI Solutions</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#f4c30010] flex items-center justify-center border border-[#f4c30030]">
+              <div className="w-8 h-8 rounded-full bg-[#C7AC5F10] flex items-center justify-center border border-[#C7AC5F30]">
                 <svg
-                  className="w-4 h-4 text-[#f4c300]"
+                  className="w-4 h-4 text-[#C7AC5F]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -163,9 +152,9 @@ const Banner = () => {
               <span className="text-sm">Intelligent Automation</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#f4c30010] flex items-center justify-center border border-[#f4c30030]">
+              <div className="w-8 h-8 rounded-full bg-[#C7AC5F10] flex items-center justify-center border border-[#C7AC5F30]">
                 <svg
-                  className="w-4 h-4 text-[#f4c300]"
+                  className="w-4 h-4 text-[#C7AC5F]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -182,9 +171,9 @@ const Banner = () => {
               <span className="text-sm">Data-Driven Insights</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#f4c30010] flex items-center justify-center border border-[#f4c30030]">
+              <div className="w-8 h-8 rounded-full bg-[#C7AC5F10] flex items-center justify-center border border-[#C7AC5F30]">
                 <svg
-                  className="w-4 h-4 text-[#f4c300]"
+                  className="w-4 h-4 text-[#C7AC5F]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -232,17 +221,17 @@ const Banner = () => {
           className="lg:pl-5 lg:pt-4 lg:pb-2 w-fit relative"
         >
           {/* Glowing effect behind robot */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-[#f4c30010] filter blur-3xl opacity-70 ai-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-[#C7AC5F10] filter blur-3xl opacity-70 ai-pulse"></div>
 
           {/* Animated circuit lines */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-0 w-16 h-[1px] bg-gradient-to-r from-[#f4c30040] to-transparent ai-shimmer"></div>
+            <div className="absolute top-1/4 left-0 w-16 h-[1px] bg-gradient-to-r from-[#C7AC5F40] to-transparent ai-shimmer"></div>
             <div
-              className="absolute top-1/2 right-0 w-20 h-[1px] bg-gradient-to-l from-[#f4c30040] to-transparent ai-shimmer"
+              className="absolute top-1/2 right-0 w-20 h-[1px] bg-gradient-to-l from-[#C7AC5F40] to-transparent ai-shimmer"
               style={{ animationDelay: "0.5s" }}
             ></div>
             <div
-              className="absolute bottom-1/4 left-1/4 w-12 h-[1px] bg-gradient-to-r from-[#f4c30040] to-transparent ai-shimmer"
+              className="absolute bottom-1/4 left-1/4 w-12 h-[1px] bg-gradient-to-r from-[#C7AC5F40] to-transparent ai-shimmer"
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
@@ -262,7 +251,7 @@ const Banner = () => {
           </div>
 
           {/* Tech indicators */}
-          <div className="absolute top-1/4 left-1/4 w-8 h-8 rounded-full border border-[#f4c30030] ai-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-8 h-8 rounded-full border border-[#C7AC5F30] ai-pulse"></div>
           <div
             className="absolute bottom-1/3 right-1/4 w-6 h-6 rounded-full border border-[#DCDFE030] ai-pulse"
             style={{ animationDelay: "1s" }}

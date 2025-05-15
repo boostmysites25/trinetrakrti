@@ -38,7 +38,7 @@ const Header = () => {
       } text-primary`}
     >
       {/* Decorative header line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#f4c30050] to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#C7AC5F50] to-transparent"></div>
 
       <div className="flex wrapper items-center gap-8 justify-between relative">
         {/* Animated circuit pattern */}
@@ -46,7 +46,7 @@ const Header = () => {
 
         <Link to="/" className="cursor-pointer relative">
           {/* Logo glow effect */}
-          <div className="absolute -inset-1 bg-[#f4c30020] rounded-full filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute -inset-1 bg-[#C7AC5F20] rounded-full filter blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           <img
             loading="lazy"
@@ -63,8 +63,8 @@ const Header = () => {
             <Link
               className={`${
                 pathname === item.link
-                  ? "text-[#f4c300] font-medium"
-                  : "text-gray-700 hover:text-[#f4c300]"
+                  ? "text-[#C7AC5F] font-medium"
+                  : "text-gray-700 hover:text-[#C7AC5F]"
               } text-sm cursor-pointer transition-all duration-300 relative group overflow-hidden`}
               key={item.id}
               to={item.link}
@@ -72,17 +72,17 @@ const Header = () => {
             >
               {/* Underline animation */}
               <span className="relative z-10">{item.label}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#f4c300] group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C7AC5F] group-hover:w-full transition-all duration-300"></span>
 
               {/* Active indicator */}
               {pathname === item.link && (
-                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#f4c300] ai-pulse"></span>
+                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#C7AC5F] ai-pulse"></span>
               )}
             </Link>
           ))}
 
           {/* AI indicator */}
-          <div className="flex items-center gap-1 text-xs text-[#f4c300] bg-[#f4c30010] px-3 py-1 rounded-full border border-[#f4c30030]">
+          <div className="flex items-center gap-1 text-xs text-[#C7AC5F] bg-[#C7AC5F10] px-3 py-1 rounded-full border border-[#C7AC5F30]">
             <RiRobot2Line className="text-sm ai-pulse" />
             <span>AI Powered</span>
           </div>
@@ -93,7 +93,7 @@ const Header = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <Hamburger
-            color="#f4c300"
+            color="#C7AC5F"
             size="26"
             toggled={isOpen}
             rounded
@@ -114,7 +114,7 @@ const Header = () => {
         <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem] relative">
           <button
             onClick={() => setIsOpen(false)}
-            className="text-[#f4c300] text-[2.2rem] hover:rotate-90 transition-all duration-300"
+            className="text-[#C7AC5F] text-[2.2rem] hover:rotate-90 transition-all duration-300"
           >
             <IoMdClose />
           </button>
@@ -127,14 +127,14 @@ const Header = () => {
               key={id}
               className={`${
                 pathname === link
-                  ? "text-[#f4c300] font-medium"
+                  ? "text-[#C7AC5F] font-medium"
                   : "text-gray-700"
               } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 ai-reveal from-right`}
               to={link}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {pathname === link && (
-                <span className="w-2 h-2 rounded-full bg-[#f4c300] ai-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
               )}
               {label}
             </Link>

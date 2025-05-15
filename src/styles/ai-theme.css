@@ -107,7 +107,7 @@
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #f4c300 }
+  50% { border-color: #C7AC5F }
 }
 
 @keyframes glow {
@@ -210,7 +210,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #f4c300, transparent, #DCDFE0, transparent, #f4c300);
+  background: linear-gradient(45deg, #C7AC5F, transparent, #DCDFE0, transparent, #C7AC5F);
   background-size: 400% 400%;
   border-radius: inherit;
   z-index: -1;
@@ -225,7 +225,7 @@
 
 .ai-typing {
   overflow: hidden;
-  border-right: 2px solid #f4c300;
+  border-right: 2px solid #C7AC5F;
   white-space: nowrap;
   margin: 0 auto;
   animation: 
@@ -288,7 +288,7 @@
 }
 
 .ai-button {
-  background: linear-gradient(90deg, #f4c300, #f4c300);
+  background: linear-gradient(90deg, #C7AC5F, #C7AC5F);
   color: white;
   border: none;
   border-radius: 8px;
@@ -324,7 +324,7 @@
 }
 
 .ai-gradient-text {
-  background: linear-gradient(90deg, #f4c300, #272727);
+  background: linear-gradient(90deg, #C7AC5F, #272727);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -342,7 +342,7 @@
   content: "";
   width: 3rem;
   height: 2px;
-  background: linear-gradient(90deg, #f4c300, rgba(187, 168, 78, 0.3));
+  background: linear-gradient(90deg, #C7AC5F, rgba(187, 168, 78, 0.3));
   display: block;
   border-radius: 1px;
   animation: shimmer 2s infinite;
@@ -351,7 +351,7 @@
 
 .ai-border-gradient {
   border: 2px solid;
-  border-image: linear-gradient(45deg, #f4c300, #DCDFE0) 1;
+  border-image: linear-gradient(45deg, #C7AC5F, #DCDFE0) 1;
 }
 
 /* Background patterns */
@@ -366,7 +366,7 @@
 }
 
 .ai-dots-bg {
-  background-image: radial-gradient(#f4c30020 1px, transparent 1px);
+  background-image: radial-gradient(#C7AC5F20 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -412,7 +412,7 @@
 
 .ai-glitch::before {
   left: 2px;
-  text-shadow: -2px 0 #f4c300;
+  text-shadow: -2px 0 #C7AC5F;
   clip: rect(44px, 450px, 56px, 0);
   animation: ai-glitch-anim 5s infinite linear alternate-reverse;
 }

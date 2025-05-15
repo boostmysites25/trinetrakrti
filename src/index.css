@@ -15,7 +15,7 @@
 :root {
   background: #ffffff;
   @apply text-primary;
-  --primary-color: #f4c300;
+  --primary-color: #C7AC5F;
   --secondary-color: #DCDFE0;
   --text-color: #333333;
   --light-bg: #f8f9fa;
@@ -67,7 +67,7 @@ html {
   
   /* Updated primary button with AI styling */
   .primary-btn {
-    @apply bg-gradient-to-r text-center rounded-full px-5 text-sm font-medium py-3 from-[#f4c300] to-[#f4c300] text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gradient-to-r hover:from-[#f4c300] hover:to-[#f4c300] cursor-pointer transition-all duration-300 relative overflow-hidden;
+    @apply bg-gradient-to-r text-center rounded-full px-5 text-sm font-medium py-3 from-[#C7AC5F] to-[#C7AC5F] text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gradient-to-r hover:from-[#C7AC5F] hover:to-[#C7AC5F] cursor-pointer transition-all duration-300 relative overflow-hidden;
   }
   
   /* Add shimmer effect to primary button */
@@ -91,12 +91,12 @@ html {
   }
   
   .blurred-blue {
-    @apply bg-[#f4c30020] h-[30rem] w-[30rem] rounded-full blur-3xl absolute;
+    @apply bg-[#C7AC5F20] h-[30rem] w-[30rem] rounded-full blur-3xl absolute;
   }
   
   /* Updated active item with AI styling */
   .active-item {
-    @apply text-[#f4c300] font-semibold relative;
+    @apply text-[#C7AC5F] font-semibold relative;
   }
   
   .active-item::after {
@@ -106,7 +106,7 @@ html {
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #f4c300, transparent);
+    background: linear-gradient(90deg, transparent, #C7AC5F, transparent);
   }
   
   /* Updated headings with AI styling */
@@ -183,20 +183,20 @@ p {
 
 /* AI-themed background patterns */
 .ai-dot-pattern {
-  background-image: radial-gradient(#f4c30020 1px, transparent 1px);
+  background-image: radial-gradient(#C7AC5F20 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 .ai-grid-pattern {
   background-image: 
-    linear-gradient(to right, #f4c30010 1px, transparent 1px),
-    linear-gradient(to bottom, #f4c30010 1px, transparent 1px);
+    linear-gradient(to right, #C7AC5F10 1px, transparent 1px),
+    linear-gradient(to bottom, #C7AC5F10 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 /* Animated gradient background */
 .ai-gradient-bg {
-  background: linear-gradient(-45deg, #ffffff, #f8f9fa, #f4c30010, #DCDFE010);
+  background: linear-gradient(-45deg, #ffffff, #f8f9fa, #C7AC5F10, #DCDFE010);
   background-size: 400% 400%;
   animation: ai-gradient 15s ease infinite;
 }
