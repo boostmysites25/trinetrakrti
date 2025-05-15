@@ -1,0 +1,215 @@
+/* Responsive styles for AI-themed website */
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+  /* Specific improvements for ServiceDetailsBanner */
+  .page-banner {
+    min-height: 50vh !important;
+  }
+  
+  .page-banner h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.3 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .page-banner img.object-cover {
+    object-position: center !important;
+  }
+  
+  /* Improve content container on mobile */
+  .service-banner-content {
+    padding: 1rem !important;
+    max-width: 95% !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-width: 1px !important;
+    border-color: rgba(187, 168, 78, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Improve icon visibility */
+  .page-banner img.object-contain {
+    width: 3rem !important;
+    height: 3rem !important;
+    padding: 0.5rem !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  /* Improve breadcrumbs visibility on mobile */
+  .page-banner div[data-aos="fade-up"] {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    max-width: 100% !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Ensure text doesn't overflow on small screens */
+  .page-banner .truncate {
+    max-width: 100px !important;
+  }
+  /* Adjust font sizes for better readability on small screens */
+  .heading {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .heading-2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Ensure AI cards are properly sized on mobile */
+  .ai-card {
+    padding: 1rem !important;
+  }
+  
+  /* Adjust spacing for mobile */
+  .wrapper {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Make sure buttons are properly sized */
+  .ai-button, .primary-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Ensure particles and decorative elements don't overwhelm mobile UI */
+  .ai-hexagon, .ai-float {
+    opacity: 0.1 !important;
+  }
+  
+  /* Improve banner visibility on mobile */
+  .page-banner {
+    min-height: 50vh !important;
+  }
+  
+  /* Ensure text is readable on mobile */
+  .ai-gradient-text {
+    font-weight: 600 !important;
+  }
+  
+  /* Adjust grid layouts for mobile */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Ensure proper spacing between stacked elements */
+  .flex-col > * {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Make sure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Adjust font sizes for tablets */
+  .heading {
+    font-size: 2rem !important;
+  }
+  
+  /* Adjust grid layouts for tablets */
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Ensure proper spacing */
+  .wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* Ensure animations don't cause performance issues on mobile */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  .ai-pulse {
+    animation-duration: 3s !important;
+  }
+  
+  .ai-float {
+    animation: none !important;
+  }
+  
+  /* Disable glitch effect on mobile for better performance */
+  .ai-glitch {
+    text-shadow: none !important;
+    animation: none !important;
+  }
+  
+  /* Add a simpler text shadow instead */
+  .ai-glitch {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  /* Reduce particle count on mobile */
+  .ai-particles {
+    opacity: 0.5 !important;
+  }
+  
+  /* Ensure text contrast is sufficient */
+  .text-white {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Improve touch targets */
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 1.5rem !important;
+  }
+  
+  .wrapper {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Ensure breadcrumbs are visible */
+  .breadcrumbs {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Custom scrollbar for services list */
+.services-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.services-scrollbar::-webkit-scrollbar-track {
+  background: rgba(220, 223, 224, 0.1);
+  border-radius: 10px;
+}
+
+.services-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(187, 168, 78, 0.3);
+  border-radius: 10px;
+}
+
+.services-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(187, 168, 78, 0.5);
+}
+
+/* Ensure proper loading on all devices */
+.title-loaded {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.banner-loaded img {
+  transform: scale(1) !important;
+}

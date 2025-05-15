@@ -1,0 +1,310 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Roboto Slab", serif; */
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  background: #ffffff;
+  @apply text-primary;
+  --primary-color: #BBA84E;
+  --secondary-color: #DCDFE0;
+  --text-color: #333333;
+  --light-bg: #f8f9fa;
+  --ai-glow: 0 0 15px rgba(187, 168, 78, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(248, 249, 250, 0.9));
+  color: var(--text-color);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* AI-themed scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--primary-color), rgba(187, 168, 78, 0.7));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(187, 168, 78, 0.2);
+  color: var(--text-color);
+}
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6;
+  }
+  
+  /* Updated primary button with AI styling */
+  .primary-btn {
+    @apply bg-gradient-to-r text-center rounded-full px-5 text-sm font-medium py-3 from-[#BBA84E] to-[#BBA84E] text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gradient-to-r hover:from-[#BBA84E] hover:to-[#BBA84E] cursor-pointer transition-all duration-300 relative overflow-hidden;
+  }
+  
+  /* Add shimmer effect to primary button */
+  .primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+  }
+  
+  .primary-btn:hover::before {
+    left: 100%;
+  }
+  
+  .link {
+    @apply cursor-pointer;
+  }
+  
+  .blurred-blue {
+    @apply bg-[#BBA84E20] h-[30rem] w-[30rem] rounded-full blur-3xl absolute;
+  }
+  
+  /* Updated active item with AI styling */
+  .active-item {
+    @apply text-[#BBA84E] font-semibold relative;
+  }
+  
+  .active-item::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #BBA84E, transparent);
+  }
+  
+  /* Updated headings with AI styling */
+  .heading {
+    @apply text-[2rem] md:text-4xl leading-tight font-semibold;
+  }
+  
+  .heading-2 {
+    @apply text-[1.5rem] md:text-3xl font-medium leading-tight;
+  }
+  
+  .error-message {
+    @apply text-red-700 text-sm h-4 mb-2;
+  }
+  
+  /* AI-themed card */
+  .ai-themed-card {
+    @apply bg-white rounded-lg border border-[#DCDFE030] shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden relative;
+  }
+  
+  .ai-themed-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(187, 168, 78, 0.05) 0%, rgba(220, 223, 224, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .ai-themed-card:hover::before {
+    opacity: 1;
+  }
+}
+
+p {
+  line-height: 1.7;
+  letter-spacing: 0.7px;
+}
+
+.landing-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../public/background-1.jpg");
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  opacity: 0.15; /* Reduced opacity for lighter theme */
+  pointer-events: none;
+  animation: moveBackground 100s linear infinite;
+}
+
+/* Add AI-themed overlay */
+.landing-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(187, 168, 78, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(220, 223, 224, 0.05) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* AI-themed background patterns */
+.ai-dot-pattern {
+  background-image: radial-gradient(#BBA84E20 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.ai-grid-pattern {
+  background-image: 
+    linear-gradient(to right, #BBA84E10 1px, transparent 1px),
+    linear-gradient(to bottom, #BBA84E10 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animated gradient background */
+.ai-gradient-bg {
+  background: linear-gradient(-45deg, #ffffff, #f8f9fa, #BBA84E10, #DCDFE010);
+  background-size: 400% 400%;
+  animation: ai-gradient 15s ease infinite;
+}
+
+@keyframes ai-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* AI-themed loading spinner styles */
+.spinner-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+/* Add circuit pattern to loading background */
+.spinner-parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTAgMCBMNTAgMCBMNTAgNTAgTDAgNTAgWiIgc3Ryb2tlPSIjQkJBODRFMjAiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PHBhdGggZD0iTTUwIDAgTDEwMCAwIEwxMDAgNTAgTDUwIDUwIFoiIHN0cm9rZT0iI0RDREZFMDIwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxwYXRoIGQ9Ik0wIDUwIEw1MCA1MCBMNTAgMTAwIEwwIDEwMCBaIiBzdHJva2U9IiNEQ0RGRTAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz48cGF0aCBkPSJNNTAgNTAgTDEwMCA1MCBMMTAwIDEwMCBMNTAgMTAwIFoiIHN0cm9rZT0iI0JCQTg0RTIwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMiIGZpbGw9IiNCQkE4NEUyMCIvPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyIiBmaWxsPSIjQkJBODRFMjAiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIwIiByPSIyIiBmaWxsPSIjRENERkUwMjAiLz48Y2lyY2xlIGN4PSIwIiBjeT0iMTAwIiByPSIyIiBmaWxsPSIjRENERkUwMjAiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjIiIGZpbGw9IiNCQkE4NEUyMCIvPjwvc3ZnPg==');
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  opacity: 0.1;
+}
+
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  @apply text-secondary;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
