@@ -14,6 +14,7 @@ import { initAllAnimations } from "./utils/scrollAnimations";
 import AIGradientBackground from "./components/AIGradientBackground";
 import "./styles/ai-theme.css";
 import "./styles/responsive.css";
+import CallUsNowButton from "./components/CallUsNowButton";
 
 const Home = React.lazy(() => import("./pages/Website/Home"));
 const AboutUs = React.lazy(() => import("./pages/Website/AboutUs"));
@@ -86,6 +87,7 @@ function App() {
             <ScrollToTop />
             <LoadingSpinnerContext />
             <WhatsAppIcon />
+            <CallUsNowButton />
           <Toaster
             position="top-bottom"
             toastOptions={{

@@ -127,7 +127,7 @@ export const services = [
 // details
 export const companyDetails = {
   logo: logoImg,
-  phone: "+91-8006800594",
+  phone: "+918006800594",
   location: "Bangalore, India",
   email: "abc@xyz.com",
 };
