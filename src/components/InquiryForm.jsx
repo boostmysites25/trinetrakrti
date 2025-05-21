@@ -3,9 +3,11 @@ import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { SpinnerContext } from "../components/SpinnerContext";
 import { companyDetails } from "../data/constant";
+import { useNavigate } from "react-router-dom";
 
 const InquiryForm = () => {
   const { setSpinner } = useContext(SpinnerContext);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -56,6 +58,7 @@ const InquiryForm = () => {
         } else {
           toast.success("Email sent successfully");
           reset();
+          navigate("/thank-you");
         }
       })
       .catch((error) => {

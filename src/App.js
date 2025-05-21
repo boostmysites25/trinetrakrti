@@ -18,6 +18,7 @@ import CallUsNowButton from "./components/CallUsNowButton";
 import { serviceDetailPages } from "./data/constant";
 
 const Home = React.lazy(() => import("./pages/Website/Home"));
+const ThankYou = React.lazy(() => import("./pages/Website/ThankYou"));
 const AboutUs = React.lazy(() => import("./pages/Website/AboutUs"));
 const OurServices = React.lazy(() => import("./pages/Website/OurServices"));
 const Blogs = React.lazy(() => import("./pages/Website/Blogs"));
@@ -25,7 +26,8 @@ const BlogDetails = React.lazy(() => import("./pages/Website/BlogDetails"));
 const ServicePageLayout = React.lazy(() =>
   import("./components/Website/ServicePageLayout")
 );
-
+const Careers = React.lazy(() => import("./pages/Website/Careers"));
+const Internship = React.lazy(() => import("./pages/Website/Internship"));
 const ContactUs = React.lazy(() => import("./pages/Website/ContactUs"));
 const LandingPage = React.lazy(() => import("./pages/LandingPage/LandingPage"));
 
@@ -63,6 +65,19 @@ function App() {
     };
   }, []);
 
+  // Tawk.to Chatbot Integration
+  useEffect(() => {
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/682dabd54f8d3219091cea9c/default";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  }, []);
+
   return (
     <SpinnerContextProvider>
       <Suspense fallback={<LoadingSpinner />}>
@@ -89,7 +104,9 @@ function App() {
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:title" element={<BlogDetails />} />
-
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/internship" element={<Internship />} />
+              <Route path="/thank-you" element={<ThankYou />} />
               {/* Services Detail Routes with Layout */}
               <Route path="/services" element={<ServicePageLayout />}>
                 {serviceDetailPages.map(({ component, link }) => (

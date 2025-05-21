@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { services } from "../../../data/constant";
 
 const CustomLogoDesign = () => {
-  const next = services[0]; // Loop back to the first service
+  const next = services[15];
   return (
     <div className="flex flex-col gap-10">
       <img

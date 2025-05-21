@@ -34,14 +34,14 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(6, 10).map(({ id, title, link }) => (
+              {services.slice(6, 11).map(({ id, title, link }) => (
                 <Link className="!min-h-fit" to={link} key={id}>
                   {title}
                 </Link>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(11, 15).map(({ id, title, link }) => (
+              {services.slice(12, 16).map(({ id, title, link }) => (
                 <Link className="!min-h-fit" to={link} key={id}>
                   {title}
                 </Link>

@@ -194,6 +194,11 @@ p {
   background-size: 20px 20px;
 }
 
+.EZDrawer__container {
+  width: 100% !important;
+  overflow-y: scroll !important;
+}
+
 /* Animated gradient background */
 .ai-gradient-bg {
   background: linear-gradient(-45deg, #ffffff, #f8f9fa, #C7AC5F10, #DCDFE010);

@@ -98,7 +98,7 @@ const ServicePageLayout = () => {
                           loading="lazy"
                           src={item.icon}
                           alt={item.title}
-                          className="min-w-5 w-5 h-5 object-contain relative z-10"
+                          className="min-w-5 w-5 h-5 object-contain relative z-10 grayscale"
                         />
                         {item.link === pathname && (
                           <div className="absolute inset-0 bg-white rounded-full filter blur-sm w-6 h-6 -top-0.5 -left-0.5 ai-pulse"></div>

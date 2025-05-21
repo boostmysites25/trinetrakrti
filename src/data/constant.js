@@ -39,6 +39,7 @@ const CustomSoftwareDevelopment = lazy(() =>
 const CustomLogoDesign = lazy(() =>
   import("../pages/Website/Services/CustomLogoDesign")
 );
+const Consulting = lazy(() => import("../pages/Website/Services/Consulting"));
 
 // details
 export const companyDetails = {
@@ -125,6 +126,11 @@ export const serviceDetailPages = [
     label: "Custom Logo Design",
     component: <CustomLogoDesign />,
   },
+  {
+    link: "consulting",
+    label: "IT Consulting",
+    component: <Consulting />,
+  },
 ];
 
 // all services
@@ -205,7 +211,7 @@ export const services = [
     id: 9,
     title: "Data Science Services",
     icon: require("../assets/images/icons/data-science.png"),
-     image: require("../assets/images/services-details/data1.webp"),
+    image: require("../assets/images/services-details/data1.webp"),
     description:
       "Transform raw data into valuable insights with our data science services. We analyze and interpret complex data sets, helping you make data-driven decisions that propel your business forward.",
     link: "/services/data-science",
@@ -214,7 +220,7 @@ export const services = [
     id: 10,
     title: "Natural Language Processing",
     icon: require("../assets/images/icons/nlp.png"),
-     image: require("../assets/images/services-details/nlp2.webp"),
+    image: require("../assets/images/services-details/nlp2.webp"),
     description:
       "Enhance human-computer interactions with our NLP services. We develop solutions that understand, interpret, and generate human language, improving communication and user engagement.",
     link: "/services/nlp",
@@ -223,7 +229,7 @@ export const services = [
     id: 11,
     title: "Cloud Migration Services",
     icon: require("../assets/images/icons/cloud-migration.png"),
-     image: require("../assets/images/services-details/cloudmigration1.webp"),
+    image: require("../assets/images/services-details/cloudmigration1.webp"),
     description:
       "Seamlessly transition to the cloud with our migration services. We ensure minimal disruption and maximum efficiency, migrating your data and applications securely and effectively.",
     link: "/services/cloud-migration",
@@ -232,7 +238,7 @@ export const services = [
     id: 12,
     title: "UI/UX Design",
     icon: require("../assets/images/icons/uiux.png"),
-     image: require("../assets/images/services-details/uiux2.webp"),
+    image: require("../assets/images/services-details/uiux2.webp"),
     description:
       "Deliver exceptional user experiences with our UI/UX design services. We focus on creating intuitive and aesthetically pleasing interfaces that engage users and drive satisfaction.",
     link: "/services/uiux-design",
@@ -241,7 +247,7 @@ export const services = [
     id: 13,
     title: "AI Bot Subscription",
     icon: require("../assets/images/icons/chatbot.png"),
-     image: require("../assets/images/services-details/chatbot1.webp"),
+    image: require("../assets/images/services-details/chatbot1.webp"),
     description:
       "Deliver exceptional user experiences with our UI/UX design services. We focus on creating intuitive and aesthetically pleasing interfaces that engage users and drive satisfaction.",
     link: "/services/ai-bot-subscription",
@@ -250,7 +256,7 @@ export const services = [
     id: 14,
     title: "Custom Software Development",
     icon: require("../assets/images/icons/custom-software.png"),
-     image: require("../assets/images/services-details/custom-software.webp"),
+    image: require("../assets/images/services-details/custom-software.webp"),
     description:
       "Tailor solutions to your unique business requirements with our custom software development services. We build scalable and robust applications that align with your strategic goals.",
     link: "/services/custom-software-development",
@@ -259,10 +265,19 @@ export const services = [
     id: 15,
     title: "Custom Logo Design",
     icon: require("../assets/images/icons/logo-design.png"),
-     image: require("../assets/images/services-details/logo-design1.webp"),
+    image: require("../assets/images/services-details/logo-design1.webp"),
     description:
       "Craft a memorable brand identity with our custom logo design services. We design unique and impactful logos that resonate with your audience and reflect your brand's essence.",
     link: "/services/custom-logo-design",
+  },
+  {
+    id: 16,
+    title: "IT Consulting",
+    icon: require("../assets/images/icons/planning.png"),
+    image: require("../assets/images/services-details/consulting1.webp"),
+    description:
+      "Navigate the complex technology landscape with our expert IT consulting services. We provide strategic guidance to help you leverage technology for growth, innovation, and competitive advantage.",
+    link: "/services/consulting",
   },
 ];
 
@@ -294,6 +309,18 @@ export const landingPageNavLinks = [
   },
 ];
 
+// Career pages
+export const careerPages = [
+  {
+    link: "careers",
+    label: "Careers",
+  },
+  {
+    link: "internship",
+    label: "Internship",
+  },
+];
+
 // website pages links
 export const websitePagesLinks = [
   {
@@ -320,6 +347,12 @@ export const websitePagesLinks = [
   },
   {
     id: 5,
+    link: "#",
+    label: "Join Us",
+    subLinks: careerPages,
+  },
+  {
+    id: 6,
     link: "/contact",
     label: "Contact Us",
   },

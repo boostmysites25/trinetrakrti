@@ -6,11 +6,13 @@ import { Divide as Hamburger } from "hamburger-react";
 import { IoMdClose } from "react-icons/io";
 import { RiRobot2Line } from "react-icons/ri";
 import { websitePagesLinks } from "../../data/constant";
+import { AiFillCaretDown } from "react-icons/ai";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const [selectedDropdown, setSelectedDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,10 +82,15 @@ const Header = () => {
                 )}
               </Link>
               {item?.subLinks && (
-                <div className="absolute text-sm w-[50rem] top-[3rem] left-[-22rem] transition-all duration-200 bg-white rounded-sm grid grid-cols-3 gap-2 invisible peer-hover:visible hover:visible overflow-hidden shadow-lg p-2">
+                <div
+                  className={`absolute text-sm top-[3rem] transition-all duration-200 bg-white rounded-sm grid gap-2 invisible peer-hover:visible hover:visible overflow-hidden shadow-lg p-2 ${
+                    item.subLinks.length >= 4 ? "grid-cols-2 w-[32rem] left-[-22rem]" : "grid-cols-1 w-[14rem] left-[-6rem]"
+                  }`}
+                >
                   {item.subLinks.map(({ link, label }) => (
                     <Link
-                      to={`/services/${link}`}
+                      key={link}
+                      to={item.id === 3 ? `/services/${link}` : `/${link}`}
                       className="p-2 block rounded-sm hover:bg-secondary/20"
                     >
                       {label}
@@ -136,21 +143,56 @@ const Header = () => {
         <div className="py-4 px-7 flex flex-col gap-4 ai-stagger">
           {websitePagesLinks.map(({ label, link, id, subLinks }, index) => (
             <div key={id} className="relative">
-              <Link
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  pathname === link
-                    ? "text-[#C7AC5F] font-medium"
-                    : "text-gray-700"
-                } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 ai-reveal from-right peer`}
-                to={link}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {pathname === link && (
-                  <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
-                )}
-                {label}
-              </Link>
+              {subLinks ? (
+                <button
+                  onClick={() =>
+                    setSelectedDropdown(selectedDropdown === id ? null : id)
+                  }
+                  className={`${
+                    pathname === link
+                      ? "text-[#C7AC5F] font-medium"
+                      : "text-gray-700"
+                  } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 peer`}
+                >
+                  <div className="flex items-center gap-2">
+                    {pathname === link && (
+                      <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
+                    )}
+                    {label}
+                  </div>{" "}
+                  <AiFillCaretDown />
+                </button>
+              ) : (
+                <Link
+                  onClick={() => setIsOpen(false)}
+                  className={`${
+                    pathname === link
+                      ? "text-[#C7AC5F] font-medium"
+                      : "text-gray-700"
+                  } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 peer`}
+                  to={link}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {pathname === link && (
+                    <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
+                  )}
+                  {label}
+                </Link>
+              )}
+              {subLinks && selectedDropdown === id && (
+                <div className="ml-4 mt-2 flex flex-col">
+                  {subLinks.map(({ link, label }) => (
+                    <Link
+                      key={link}
+                      to={id === 3 ? `/services/${link}` : `/${link}`}
+                      className="text-gray-600 text-base"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

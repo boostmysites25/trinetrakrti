@@ -323,20 +323,6 @@ const Home = () => {
 
             {/* Development Process Section */}
             <div className="mb-16">
-              <div className="text-center mb-10">
-                <h2
-                  className="heading ai-gradient-text inline-block relative"
-                  id="development-process"
-                >
-                  Our AI Development Process
-                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#C7AC5F]/20"></span>
-                </h2>
-                <p className="max-w-3xl mx-auto mt-4 text-gray-700">
-                  We follow a structured, collaborative approach to AI
-                  development that ensures high-quality solutions tailored to
-                  your specific business needs.
-                </p>
-              </div>
               <WorkFlow />
             </div>
 
@@ -514,10 +500,12 @@ const Home = () => {
             <div className="absolute inset-0 ai-grid-pattern opacity-10"></div>
             <div className="wrapper">
               <div className="text-center mb-10">
-                <div className="ai-decorative-line mx-auto">
-                  <h2 className="font-medium text-secondary ai-gradient-text">
-                    Our Technology Stack
-                  </h2>
+                <div className="flex justify-center">
+                  <div className="ai-decorative-line mx-auto">
+                    <h2 className="font-medium text-secondary ai-gradient-text">
+                      Our Technology Stack
+                    </h2>
+                  </div>
                 </div>
                 <h2 className="heading mt-4">
                   Powered by Advanced Technologies

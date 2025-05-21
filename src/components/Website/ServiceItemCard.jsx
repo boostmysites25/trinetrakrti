@@ -35,7 +35,7 @@ const ServiceItemCard = ({ item }) => {
               loading="lazy"
               src={item.icon}
               alt="icon"
-              className="group-hover:scale-[120%] transition-all duration-300 w-[3rem] grayscale group-hover:grayscale-0"
+              className="group-hover:scale-[120%] transition-all duration-300 w-[3rem] grayscale"
             />
           </div>
 
