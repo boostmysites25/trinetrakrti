@@ -16,6 +16,7 @@ import "./styles/ai-theme.css";
 import "./styles/responsive.css";
 import CallUsNowButton from "./components/CallUsNowButton";
 import { serviceDetailPages } from "./data/constant";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 const Home = React.lazy(() => import("./pages/Website/Home"));
 const ThankYou = React.lazy(() => import("./pages/Website/ThankYou"));
@@ -65,19 +66,6 @@ function App() {
     };
   }, []);
 
-  // Tawk.to Chatbot Integration
-  useEffect(() => {
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/682dabd54f8d3219091cea9c/default";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  }, []);
-
   return (
     <SpinnerContextProvider>
       <Suspense fallback={<LoadingSpinner />}>
@@ -87,6 +75,10 @@ function App() {
             <LoadingSpinnerContext />
             <WhatsAppIcon />
             <CallUsNowButton />
+            <TawkMessengerReact
+              propertyId="682dabd54f8d3219091cea9c"
+              widgetId="1irp6eejm"
+            />
             <Toaster
               position="top-bottom"
               toastOptions={{
@@ -97,6 +89,10 @@ function App() {
               }}
             />
             <Routes>
+              <Route path="*" element={<Navigate to="/" />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/services" element={<OurServices />} />
               <Route path="*" element={<Navigate to="/" />} />
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
