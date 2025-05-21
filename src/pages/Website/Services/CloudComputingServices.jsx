@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/cloudcomputing1.jpg";
-import img2 from "../../assets/images/services-details/cloudcomputing2.png";
+import img1 from "../../../assets/images/services-details/cloudcomputing1.jpg";
+import img2 from "../../../assets/images/services-details/cloudcomputing2.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const CloudComputingServices = () => {
   const next = services[5];

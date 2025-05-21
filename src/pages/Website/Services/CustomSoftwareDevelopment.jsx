@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/web-development1.jpeg";
-import img2 from "../../assets/images/services-details/custom-software.webp";
+import img1 from "../../../assets/images/services-details/web-development1.jpeg";
+import img2 from "../../../assets/images/services-details/custom-software.webp";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const CustomSoftwareDevelopment = () => {
   const next = services[14];

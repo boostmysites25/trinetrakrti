@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/ai1.jpg"; // Using AI image as placeholder
-import img2 from "../../assets/images/services-details/ai2.jpg"; // Using AI image as placeholder
+import img1 from "../../../assets/images/services-details/ai1.jpg";
+import img2 from "../../../assets/images/services-details/ai2.jpg";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const MachineLearning = () => {
   const next = services[8];

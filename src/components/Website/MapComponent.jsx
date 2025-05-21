@@ -21,26 +21,26 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapComponent = () => {
   // Use useMemo to memoize the location array
-  const location = useMemo(() => [12.8951, 77.586], []);
+  const location = useMemo(() => [15.432453, 75.632282], []);
 
   const mapRef = useRef(); // Reference to the map
 
   // Center the map to the location when it loads
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.setView(location, 13); // Set view to the location and zoom level
+      mapRef.current.setView(location, 25); // Set view to the location and zoom level
     }
   }, [location]); // Now location will not change on every render
 
   return (
     <MapContainer
       center={location}
-      zoom={13}
+      zoom={25}
       style={{ height: "70vh", width: "100%", zIndex: 0 }}
       whenCreated={(mapInstance) => (mapRef.current = mapInstance)} // Save the map instance to ref
       scrollWheelZoom={false} // Disable zooming with the scroll wheel
-      doubleClickZoom={false} // Disable zooming by double-clicking
-      //   dragging={false} // Disable dragging the map
+      dragging={false} // Disable dragging the map
+      zoomControl
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={location}>

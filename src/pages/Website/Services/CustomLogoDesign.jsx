@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/logo-design1.webp";
-import img2 from "../../assets/images/services-details/logo-design2.webp";
+import img1 from "../../../assets/images/services-details/logo-design1.webp";
+import img2 from "../../../assets/images/services-details/logo-design2.webp";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const CustomLogoDesign = () => {
   const next = services[0]; // Loop back to the first service

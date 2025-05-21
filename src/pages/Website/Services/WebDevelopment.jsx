@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import img1 from "../../assets/images/services-details/web-development1.jpeg";
-import img2 from "../../assets/images/services-details/web-development2.jpg";
+import img1 from "../../../assets/images/services-details/web-development1.jpeg";
+import img2 from "../../../assets/images/services-details/web-development2.jpg";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 import { FaCode, FaShoppingCart, FaLaptopCode, FaServer } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
 

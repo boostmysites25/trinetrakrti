@@ -60,25 +60,38 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-10">
           {websitePagesLinks.map((item, index) => (
-            <Link
-              className={`${
-                pathname === item.link
-                  ? "text-[#C7AC5F] font-medium"
-                  : "text-gray-700 hover:text-[#C7AC5F]"
-              } text-sm cursor-pointer transition-all duration-300 relative group overflow-hidden`}
-              key={item.id}
-              to={item.link}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Underline animation */}
-              <span className="relative z-10">{item.label}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C7AC5F] group-hover:w-full transition-all duration-300"></span>
+            <div className="relative" key={item.id}>
+              <Link
+                className={`${
+                  pathname === item.link
+                    ? "text-[#C7AC5F] font-medium"
+                    : "text-gray-700 hover:text-[#C7AC5F]"
+                } text-sm cursor-pointer transition-all duration-300 relative group peer overflow-hidden`}
+                to={item.link}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Underline animation */}
+                <span className="relative z-10">{item.label}</span>
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C7AC5F] group-hover:w-full transition-all duration-300"></span>
 
-              {/* Active indicator */}
-              {pathname === item.link && (
-                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#C7AC5F] ai-pulse"></span>
+                {/* Active indicator */}
+                {pathname === item.link && (
+                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-[#C7AC5F] ai-pulse"></span>
+                )}
+              </Link>
+              {item?.subLinks && (
+                <div className="absolute text-sm w-[50rem] top-[3rem] left-[-22rem] transition-all duration-200 bg-white rounded-sm grid grid-cols-3 gap-2 invisible peer-hover:visible hover:visible overflow-hidden shadow-lg p-2">
+                  {item.subLinks.map(({ link, label }) => (
+                    <Link
+                      to={`/services/${link}`}
+                      className="p-2 block rounded-sm hover:bg-secondary/20"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
               )}
-            </Link>
+            </div>
           ))}
 
           {/* AI indicator */}
@@ -121,23 +134,24 @@ const Header = () => {
         </div>
 
         <div className="py-4 px-7 flex flex-col gap-4 ai-stagger">
-          {websitePagesLinks.map(({ label, link, id }, index) => (
-            <Link
-              onClick={() => setIsOpen(false)}
-              key={id}
-              className={`${
-                pathname === link
-                  ? "text-[#C7AC5F] font-medium"
-                  : "text-gray-700"
-              } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 ai-reveal from-right`}
-              to={link}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {pathname === link && (
-                <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
-              )}
-              {label}
-            </Link>
+          {websitePagesLinks.map(({ label, link, id, subLinks }, index) => (
+            <div key={id} className="relative">
+              <Link
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  pathname === link
+                    ? "text-[#C7AC5F] font-medium"
+                    : "text-gray-700"
+                } text-xl transition-all duration-300 hover:translate-x-2 flex items-center gap-2 ai-reveal from-right peer`}
+                to={link}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {pathname === link && (
+                  <span className="w-2 h-2 rounded-full bg-[#C7AC5F] ai-pulse"></span>
+                )}
+                {label}
+              </Link>
+            </div>
           ))}
         </div>
       </Drawer>

@@ -1,4 +1,131 @@
+import { lazy } from "react";
 import logoImg from "../assets/images/logo/logo1.png";
+
+// Service Detail Pages
+const WebDevelopment = lazy(() =>
+  import("../pages/Website/Services/WebDevelopment")
+);
+const AppDevelopment = lazy(() =>
+  import("../pages/Website/Services/AppDevelopment")
+);
+const AIDevelopment = lazy(() =>
+  import("../pages/Website/Services/AIDevelopment")
+);
+const BlockchainSolutions = lazy(() =>
+  import("../pages/Website/Services/BlockchainSolutions")
+);
+const CloudComputingServices = lazy(() =>
+  import("../pages/Website/Services/CloudComputingServices")
+);
+const GameDevelopment = lazy(() =>
+  import("../pages/Website/Services/GameDevelopment")
+);
+const RPA = lazy(() => import("../pages/Website/Services/RPA"));
+const MachineLearning = lazy(() =>
+  import("../pages/Website/Services/MachineLearning")
+);
+const DataScience = lazy(() => import("../pages/Website/Services/DataScience"));
+const NLP = lazy(() => import("../pages/Website/Services/NLP"));
+const CloudMigration = lazy(() =>
+  import("../pages/Website/Services/CloudMigration")
+);
+const UIUXDesign = lazy(() => import("../pages/Website/Services/UIUXDesign"));
+const AIBotSubscription = lazy(() =>
+  import("../pages/Website/Services/AIBotSubscription")
+);
+const CustomSoftwareDevelopment = lazy(() =>
+  import("../pages/Website/Services/CustomSoftwareDevelopment")
+);
+const CustomLogoDesign = lazy(() =>
+  import("../pages/Website/Services/CustomLogoDesign")
+);
+
+// details
+export const companyDetails = {
+  logo: logoImg,
+  phone: "+918006800594",
+  location: "Gadag,Karanataka and Bangalore, India",
+  email: "contact@trinetrakrti.com",
+};
+
+// Service Detail Pages
+export const serviceDetailPages = [
+  {
+    link: "web-development",
+    label: "Web Development",
+    component: <WebDevelopment />,
+  },
+  {
+    link: "app-development",
+    label: "App Development",
+    component: <AppDevelopment />,
+  },
+  {
+    link: "ai-development",
+    label: "AI Development",
+    component: <AIDevelopment />,
+  },
+  {
+    link: "blockchain-solutions",
+    label: "Blockchain Solutions",
+    component: <BlockchainSolutions />,
+  },
+  {
+    link: "cloud-computing-services",
+    label: "Cloud Computing Services",
+    component: <CloudComputingServices />,
+  },
+  {
+    link: "game-development",
+    label: "Game Development",
+    component: <GameDevelopment />,
+  },
+  {
+    link: "rpa",
+    label: "Robotic Process Automation",
+    component: <RPA />,
+  },
+  {
+    link: "machine-learning",
+    label: "Machine Learning",
+    component: <MachineLearning />,
+  },
+  {
+    link: "data-science",
+    label: "Data Science",
+    component: <DataScience />,
+  },
+  {
+    link: "nlp",
+    label: "Natural Language Processing",
+    component: <NLP />,
+  },
+  {
+    link: "cloud-migration",
+    label: "Cloud Migration",
+    component: <CloudMigration />,
+  },
+  {
+    link: "uiux-design",
+    label: "UI/UX Design",
+    component: <UIUXDesign />,
+  },
+  {
+    link: "ai-bot-subscription",
+    label: "AI Bot Subscription",
+    component: <AIBotSubscription />,
+  },
+  {
+    link: "custom-software-development",
+    label: "Custom Software Development",
+    component: <CustomSoftwareDevelopment />,
+  },
+  {
+    link: "custom-logo-design",
+    label: "Custom Logo Design",
+    component: <CustomLogoDesign />,
+  },
+];
 
 // all services
 export const services = [
@@ -6,6 +133,7 @@ export const services = [
     id: 1,
     title: "Web Development",
     icon: require("../assets/images/icons/software-development.png"),
+    image: require("../assets/images/services-details/web-development2.jpg"),
     description:
       "Establish a strong online presence with our web development services. We create responsive and visually appealing websites that are optimized for performance and user experience.",
     link: "/services/web-development",
@@ -14,30 +142,34 @@ export const services = [
     id: 2,
     title: "App Development",
     icon: require("../assets/images/icons/android-development.png"),
+    image: require("../assets/images/services-details/app-development1.jpeg"),
     description:
       "Reach your audience on the go with our custom mobile app development services. We design intuitive and user-friendly applications for both iOS and Android platforms, ensuring seamless user experiences.",
     link: "/services/app-development",
   },
   {
     id: 3,
-    title: "Artificial Intelligence (AI) Development",
+    title: "AI Development",
     icon: require("../assets/images/icons/ai.png"),
+    image: require("../assets/images/services-details/ai1.jpg"),
     description:
       "Harness the power of AI to drive innovation in your business. Our AI development services include machine learning, natural language processing, and predictive analytics, enabling smarter decision-making.",
-    link: "/services/ai-ml-development",
+    link: "/services/ai-development",
   },
   {
     id: 4,
     title: "Blockchain Solutions",
     icon: require("../assets/images/icons/blockchain.png"),
+    image: require("../assets/images/services-details/blockchain1.webp"),
     description:
       "Unlock the potential of decentralized technologies with our blockchain development services. We offer secure and scalable solutions tailored to your business needs, enhancing transparency and efficiency.",
     link: "/services/blockchain-solutions",
   },
   {
     id: 5,
-    title: "Cloud Computing Services",
+    title: "Cloud Computing",
     icon: require("../assets/images/icons/cloudcomputing.png"),
+    image: require("../assets/images/services-details/cloudcomputing1.jpg"),
     description:
       "Scale your infrastructure effortlessly with our cloud computing solutions. We offer secure and reliable cloud services, ensuring flexibility and cost-effectiveness for your business operations.",
     link: "/services/cloud-computing-services",
@@ -46,14 +178,16 @@ export const services = [
     id: 6,
     title: "Game Development",
     icon: require("../assets/images/icons/game-development.png"),
+    image: require("../assets/images/services-details/game1.webp"),
     description:
       "Bring your gaming ideas to life with our immersive game development services. From concept to deployment, we create engaging and interactive experiences for players across platforms.",
     link: "/services/game-development",
   },
   {
     id: 7,
-    title: "Robotic Process Automation (RPA)",
+    title: "Robotic Process Automation",
     icon: require("../assets/images/icons/rpa.png"),
+    image: require("../assets/images/services-details/rpa1.jpeg"),
     description:
       "Streamline your business operations with our RPA solutions. Automate repetitive tasks, reduce errors, and improve efficiency, allowing your team to focus on strategic initiatives.",
     link: "/services/rpa",
@@ -62,6 +196,7 @@ export const services = [
     id: 8,
     title: "Machine Learning Services",
     icon: require("../assets/images/icons/ml.png"),
+    image: require("../assets/images/services-details/ai.jpg"),
     description:
       "Leverage data to gain insights and make informed decisions with our machine learning services. We build models that learn from your data, providing actionable intelligence for your business.",
     link: "/services/machine-learning",
@@ -70,14 +205,16 @@ export const services = [
     id: 9,
     title: "Data Science Services",
     icon: require("../assets/images/icons/data-science.png"),
+     image: require("../assets/images/services-details/data1.webp"),
     description:
       "Transform raw data into valuable insights with our data science services. We analyze and interpret complex data sets, helping you make data-driven decisions that propel your business forward.",
     link: "/services/data-science",
   },
   {
     id: 10,
-    title: "Natural Language Processing (NLP)",
+    title: "Natural Language Processing",
     icon: require("../assets/images/icons/nlp.png"),
+     image: require("../assets/images/services-details/nlp2.webp"),
     description:
       "Enhance human-computer interactions with our NLP services. We develop solutions that understand, interpret, and generate human language, improving communication and user engagement.",
     link: "/services/nlp",
@@ -86,6 +223,7 @@ export const services = [
     id: 11,
     title: "Cloud Migration Services",
     icon: require("../assets/images/icons/cloud-migration.png"),
+     image: require("../assets/images/services-details/cloudmigration1.webp"),
     description:
       "Seamlessly transition to the cloud with our migration services. We ensure minimal disruption and maximum efficiency, migrating your data and applications securely and effectively.",
     link: "/services/cloud-migration",
@@ -94,6 +232,7 @@ export const services = [
     id: 12,
     title: "UI/UX Design",
     icon: require("../assets/images/icons/uiux.png"),
+     image: require("../assets/images/services-details/uiux2.webp"),
     description:
       "Deliver exceptional user experiences with our UI/UX design services. We focus on creating intuitive and aesthetically pleasing interfaces that engage users and drive satisfaction.",
     link: "/services/uiux-design",
@@ -102,6 +241,7 @@ export const services = [
     id: 13,
     title: "AI Bot Subscription",
     icon: require("../assets/images/icons/chatbot.png"),
+     image: require("../assets/images/services-details/chatbot1.webp"),
     description:
       "Deliver exceptional user experiences with our UI/UX design services. We focus on creating intuitive and aesthetically pleasing interfaces that engage users and drive satisfaction.",
     link: "/services/ai-bot-subscription",
@@ -110,6 +250,7 @@ export const services = [
     id: 14,
     title: "Custom Software Development",
     icon: require("../assets/images/icons/custom-software.png"),
+     image: require("../assets/images/services-details/custom-software.webp"),
     description:
       "Tailor solutions to your unique business requirements with our custom software development services. We build scalable and robust applications that align with your strategic goals.",
     link: "/services/custom-software-development",
@@ -118,19 +259,12 @@ export const services = [
     id: 15,
     title: "Custom Logo Design",
     icon: require("../assets/images/icons/logo-design.png"),
+     image: require("../assets/images/services-details/logo-design1.webp"),
     description:
       "Craft a memorable brand identity with our custom logo design services. We design unique and impactful logos that resonate with your audience and reflect your brand's essence.",
     link: "/services/custom-logo-design",
   },
 ];
-
-// details
-export const companyDetails = {
-  logo: logoImg,
-  phone: "+918006800594",
-  location: "Bangalore, India",
-  email: "abc@xyz.com",
-};
 
 export const landingPageNavLinks = [
   {
@@ -176,6 +310,7 @@ export const websitePagesLinks = [
     id: 3,
     link: "/services",
     label: "Services",
+    subLinks: serviceDetailPages,
   },
   {
     id: 4,
@@ -484,36 +619,35 @@ export const industriesCompanyServe = [
   },
 ];
 
-
 // portfolio images (web development)
 export const webPortfolio = [
   {
     id: 1,
-    img: require('../assets/images/portfolio/web-development/5ghomes.webp'),
+    img: require("../assets/images/portfolio/web-development/5ghomes.webp"),
     title: "5g Homes",
     link: "https://5ghighspeedinternet.co",
   },
   {
     id: 2,
-    img: require('../assets/images/portfolio/web-development/cold-creekcap.webp'),
+    img: require("../assets/images/portfolio/web-development/cold-creekcap.webp"),
     title: "Cold Creekcap",
     link: "https://www.coldcreekcap.com",
   },
   {
     id: 3,
-    img: require('../assets/images/portfolio/web-development/think-reality.webp'),
+    img: require("../assets/images/portfolio/web-development/think-reality.webp"),
     title: "Think Reality",
     link: "https://thinkrealty.ae",
   },
   {
     id: 4,
-    img: require('../assets/images/portfolio/web-development/akash-mega-mart.webp'),
+    img: require("../assets/images/portfolio/web-development/akash-mega-mart.webp"),
     title: "Akash Mega Mart",
     link: "https://akashmegamart.com/",
   },
   {
     id: 5,
-    img: require('../assets/images/portfolio/web-development/midwam.webp'),
+    img: require("../assets/images/portfolio/web-development/midwam.webp"),
     title: "Midwam – Immersive Experience Design Company",
     link: "https://www.midwam.com/en/about",
   },
@@ -523,32 +657,32 @@ export const webPortfolio = [
 export const appPortfolio = [
   {
     id: 1,
-    img: require('../assets/images/portfolio/app-development/akash_mega_mart-app.webp'),
+    img: require("../assets/images/portfolio/app-development/akash_mega_mart-app.webp"),
     title: "Akash Mega Mart Mobile App",
     link: "https://play.google.com/store/apps/details?id=com.app.akash_mega_mart",
   },
   {
     id: 2,
-    img: require('../assets/images/portfolio/app-development/feelit_app.webp'),
+    img: require("../assets/images/portfolio/app-development/feelit_app.webp"),
     title: "FeelIt Mobile App",
     link: "https://play.google.com/store/apps/details?id=com.feelit.feelit_app",
   },
   {
     id: 3,
-    img: require('../assets/images/portfolio/app-development/klikomics.webp'),
+    img: require("../assets/images/portfolio/app-development/klikomics.webp"),
     title: "Klikomics Mobile App",
     link: "https://play.google.com/store/apps/details?id=com.klikomics.android&pcampaignid=web_share",
   },
   {
     id: 4,
-    img: require('../assets/images/portfolio/app-development/autosnap-app.webp'),
+    img: require("../assets/images/portfolio/app-development/autosnap-app.webp"),
     title: "AutoSnap Mobile App",
     link: "https://play.google.com/store/apps/details?id=com.Zigna.AutoSnap&pcampaignid=web_share",
   },
   {
     id: 5,
-    img: require('../assets/images/portfolio/app-development/rentop.webp'),
+    img: require("../assets/images/portfolio/app-development/rentop.webp"),
     title: "Rentop Bike and Car",
     link: "https://play.google.com/store/apps/details?id=com.rentop&pcampaignid=web_share",
-  },
+  },
 ];

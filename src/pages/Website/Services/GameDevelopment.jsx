@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/game1.webp";
-import img2 from "../../assets/images/services-details/game2.webp";
+import img1 from "../../../assets/images/services-details/game1.webp";
+import img2 from "../../../assets/images/services-details/game2.webp";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const GameDevelopment = () => {
   const next = services[6];

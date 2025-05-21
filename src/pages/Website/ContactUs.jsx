@@ -105,12 +105,12 @@ const ContactUs = () => {
         </div>
       </section>
       <section className="mt-10">
-        <div className="-mb-[8rem]">
+        <div className="-mb-[4rem]">
           <InquiryForm />
         </div>
       </section>
       <MapComponent />
-      <div className="-mt-[8rem] relative z-10">
+      <div className="-mt-[6rem] relative z-10">
         <SolveITNeeds />
       </div>
       <Footer />

@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/ai1.jpg";
-import img2 from "../../assets/images/services-details/ai2.jpg";
+import img1 from "../../../assets/images/services-details/ai1.jpg";
+import img2 from "../../../assets/images/services-details/ai2.jpg";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const AIDevelopment = () => {
   const next = services[3];

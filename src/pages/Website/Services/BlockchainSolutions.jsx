@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/images/services-details/blockchain1.webp";
-import img2 from "../../assets/images/services-details/blockchain2.webp";
+import img1 from "../../../assets/images/services-details/blockchain1.webp";
+import img2 from "../../../assets/images/services-details/blockchain2.webp";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { services } from "../../data/constant";
+import { services } from "../../../data/constant";
 
 const BlockchainSolutions = () => {
   const next = services[4];

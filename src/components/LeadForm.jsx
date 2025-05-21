@@ -28,23 +28,26 @@ const LeadForm = () => {
 
     var emailBody = "Name: " + values.name + "\n\n";
     emailBody += "Email: " + values.email + "\n\n";
-    emailBody += "Subject: " + values.subject + "\n\n";
     emailBody += "Message:\n" + values.message;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: "You have a new message from TrinetraKrti",
+      subject: values.subject,
       body: emailBody,
+      name: "TrinetraKrti",
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    await fetch(
+      "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((response) => response.json())
       .then(() => {
         toast.success("Email sent successfully");
