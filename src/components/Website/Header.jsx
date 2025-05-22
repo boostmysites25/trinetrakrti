@@ -184,7 +184,7 @@ const Header = () => {
                   {subLinks.map(({ link, label }) => (
                     <Link
                       key={link}
-                      to={id === 3 ? `/services/${link}` : `/${link}`}
+                      to={id === 3 ? `/services/${link}` : `${link}`}
                       className="text-gray-600 text-base"
                       onClick={() => setIsOpen(false)}
                     >
