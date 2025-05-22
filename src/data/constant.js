@@ -332,27 +332,42 @@ export const websitePagesLinks = [
     id: 2,
     link: "/about-us",
     label: "About Us",
+    subLinks: [
+      {
+        link: "/about-us",
+        label: "About Company",
+      },
+      {
+        link: "/leadership",
+        label: "About Leadership",
+      },
+    ],
   },
   {
     id: 3,
+    link: "/investors",
+    label: "For Investors",
+  },
+  {
+    id: 4,
     link: "/services",
     label: "Services",
     subLinks: serviceDetailPages,
   },
   {
-    id: 4,
+    id: 5,
     link: "#",
     // link: "/blogs",
     label: "Blogs",
   },
   {
-    id: 5,
+    id: 6,
     link: "#",
     label: "Join Us",
     subLinks: careerPages,
   },
   {
-    id: 6,
+    id: 7,
     link: "/contact",
     label: "Contact Us",
   },

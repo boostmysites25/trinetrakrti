@@ -90,7 +90,7 @@ const Header = () => {
                   {item.subLinks.map(({ link, label }) => (
                     <Link
                       key={link}
-                      to={item.id === 3 ? `/services/${link}` : `/${link}`}
+                      to={item.id === 3 ? `/services/${link}` : `${link}`}
                       className="p-2 block rounded-sm hover:bg-secondary/20"
                     >
                       {label}

@@ -31,6 +31,8 @@ const Careers = React.lazy(() => import("./pages/Website/Careers"));
 const Internship = React.lazy(() => import("./pages/Website/Internship"));
 const ContactUs = React.lazy(() => import("./pages/Website/ContactUs"));
 const LandingPage = React.lazy(() => import("./pages/LandingPage/LandingPage"));
+const Leadership = React.lazy(() => import("./pages/Website/Leadership"));
+const Investors = React.lazy(() => import("./pages/Website/Investors"));
 
 AOS.init({
   once: true,
@@ -92,10 +94,8 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/services" element={<OurServices />} />
-              <Route path="*" element={<Navigate to="/" />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/leadership" element={<Leadership />} />
+              <Route path="/investors" element={<Investors />} />
               <Route path="/services" element={<OurServices />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/blogs" element={<Blogs />} />
