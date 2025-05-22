@@ -55,11 +55,11 @@ const Leadership = () => {
         <div className="wrapper">
           {/* Vinayak Profile */}
           <div data-aos="fade-up" className="mb-20 relative z-10">
-            <div className="bg-gradient-to-r from-[#010C2A]/90 to-[#010C2A]/80 text-white p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm">
-              <div className="border border-[#00CDFF]/30 rounded-lg p-8">
-                <div className="mb-6 border-b border-[#00CDFF]/30 pb-6">
-                  <h3 className="text-3xl font-bold text-[#00CDFF]">Vinayak R. Tirlapur</h3>
-                  <p className="text-white/80 font-medium text-xl mt-1">Founder & CEO, TOT (Trinetrakrti)</p>
+            <div className="bg-primary/5 p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm">
+              <div className="border border-primary/5 rounded-lg p-8">
+                <div className="mb-6 border-b border-primary/5 pb-6">
+                  <h3 className="text-3xl font-bold text-primary">Vinayak R Tirlapur</h3>
+                  <p className="text-black/60 font-medium text-xl mt-1">Founder & CEO, TOT (Trinetrakrti)</p>
                 </div>
                 
                 <div className="space-y-6">
@@ -69,8 +69,8 @@ const Leadership = () => {
                     His deep expertise and entrepreneurial drive are key to TOT's mission.
                   </p>
                   
-                  <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                    <h4 className="text-xl font-semibold mb-3 text-[#00CDFF]">Professional Journey and Expertise</h4>
+                  <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                    <h4 className="text-xl font-semibold mb-3 text-primary">Professional Journey and Expertise</h4>
                     <p className="mb-4">
                       Vinayak's extensive career in the IT sector has seen him contribute to prominent organizations including TCS, HCL, Mphasis, Pitney Bowes, and Fusion Software Solutions. 
                       This diverse experience has equipped him with a comprehensive understanding of various facets of data and technology.
@@ -79,41 +79,41 @@ const Leadership = () => {
                       He possesses a formidable skill set in cutting-edge technologies crucial for the AI landscape, including:
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">AI & Machine Learning</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">AI & Machine Learning</h5>
                         <p className="text-sm">Prompt Engineering, Generative AI, AI tools like ChatGPT, Blackbox, Gemini, and Claude</p>
                       </div>
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">Big Data</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">Big Data</h5>
                         <p className="text-sm">Big Data & Hadoop, Spark & Scala, Kafka, Airflow, Data Warehousing, Data Lake Processing, ETL/ELT</p>
                       </div>
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">Cloud Computing</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">Cloud Computing</h5>
                         <p className="text-sm">AWS and Azure Services, Snowflake</p>
                       </div>
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">Programming & Analytics</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">Programming & Analytics</h5>
                         <p className="text-sm">Python, Data Analytics & Visualization, Business Intelligence (BI)</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                    <h4 className="text-xl font-semibold mb-3 text-[#00CDFF]">Educational Background</h4>
+                  <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                    <h4 className="text-xl font-semibold mb-3 text-primary">Educational Background</h4>
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">MBA</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">MBA</h5>
                         <p className="text-sm">Business Analytics, Alliance School of Business</p>
                       </div>
-                      <div className="bg-[#010C2A]/70 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-2 text-[#00CDFF]">Bachelor's Degree</h5>
+                      <div className="bg-white/70 p-4 rounded-lg">
+                        <h5 className="font-semibold mb-2 text-primary">Bachelor's Degree</h5>
                         <p className="text-sm">Electronics and Communication, SDM College of Engineering and Technology</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                    <h4 className="text-xl font-semibold mb-3 text-[#00CDFF]">Current Pursuits & Vision</h4>
+                  <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                    <h4 className="text-xl font-semibold mb-3 text-primary">Current Pursuits & Vision</h4>
                     <p>
                       Vinayak is currently pursuing his PhD. Driven by an unwavering passion for Generative AI and Prompt Engineering, 
                       this ongoing academic endeavor reflects his commitment to pushing the boundaries of AI research and development, 
@@ -132,7 +132,7 @@ const Leadership = () => {
             <div data-aos="fade-right" className="bg-gradient-to-br from-white/90 to-white/80 p-1 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm">
               <div className="border border-primary/30 rounded-lg p-6">
                 <div className="mb-4 border-b border-primary/30 pb-4">
-                  <h3 className="text-2xl font-bold text-primary">Rajkumar B. Tirlapur</h3>
+                  <h3 className="text-2xl font-bold text-primary">Rajkumar B Tirlapur</h3>
                   <p className="text-secondary font-medium">Director, TOT (Trinetrakrti)</p>
                 </div>
                 
@@ -175,7 +175,7 @@ const Leadership = () => {
             <div data-aos="fade-left" className="bg-gradient-to-bl from-white/90 to-white/80 p-1 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm">
               <div className="border border-primary/30 rounded-lg p-6">
                 <div className="mb-4 border-b border-primary/30 pb-4">
-                  <h3 className="text-2xl font-bold text-primary">Chandrakala R. Tirlapur</h3>
+                  <h3 className="text-2xl font-bold text-primary">Chandrakala R Tirlapur</h3>
                   <p className="text-secondary font-medium">Director, TOT (Trinetrakrti)</p>
                 </div>
                 
@@ -214,7 +214,7 @@ const Leadership = () => {
       {/* Team Values Section */}
       <section className="wrapper pb-[5rem]">
         <div data-aos="fade-up" className="text-center mb-10">
-          <div className="ai-decorative-line mx-auto">
+          <div className="ai-decorative-line w-fit mx-auto">
             <h6 className="font-medium text-secondary capitalize">
               Our Philosophy
             </h6>

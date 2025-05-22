@@ -14,7 +14,6 @@ import { initAllAnimations } from "./utils/scrollAnimations";
 import AIGradientBackground from "./components/AIGradientBackground";
 import "./styles/ai-theme.css";
 import "./styles/responsive.css";
-import CallUsNowButton from "./components/CallUsNowButton";
 import { serviceDetailPages } from "./data/constant";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
@@ -76,7 +75,6 @@ function App() {
             <ScrollToTop />
             <LoadingSpinnerContext />
             <WhatsAppIcon />
-            <CallUsNowButton />
             <TawkMessengerReact
               propertyId="682dabd54f8d3219091cea9c"
               widgetId="1irp6eejm"

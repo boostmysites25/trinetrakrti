@@ -53,9 +53,9 @@ const Investors = () => {
 
         <div className="wrapper relative z-10">
           {/* Executive Summary */}
-          <div data-aos="fade-up" className="bg-gradient-to-r from-[#010C2A]/90 to-[#010C2A]/80 text-white p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
-            <div className="border border-[#00CDFF]/30 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-[#00CDFF] mb-4">Executive Summary</h3>
+          <div data-aos="fade-up" className="bg-primary/5 p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
+            <div className="border border-gray-300 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">Executive Summary</h3>
               <p className="text-lg leading-relaxed">
                 TOT (Trinetrakrti) stands at the vanguard of the burgeoning Generative AI and Prompt Engineering landscape, 
                 offering a compelling investment opportunity. Led by a seasoned founder with deep technical expertise, our 
@@ -125,17 +125,17 @@ const Investors = () => {
           </div>
 
           {/* Projected Financials */}
-          <div data-aos="fade-up" className="bg-gradient-to-r from-[#010C2A]/90 to-[#010C2A]/80 text-white p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
-            <div className="border border-[#00CDFF]/30 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-[#00CDFF] mb-4">Projected Financials: Driving Strong ARR & MRR Growth</h3>
+          <div data-aos="fade-up" className="bg-primary/5 p-1 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
+            <div className="border border-gray-300 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">Projected Financials: Driving Strong ARR & MRR Growth</h3>
               <p className="mb-6">
                 Our business model is built to generate robust recurring revenue streams. While specific historical figures are under wraps 
                 for private discussion, our illustrative projections for ARR and MRR demonstrate aggressive growth:
               </p>
               
               <div className="space-y-6">
-                <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                  <h4 className="text-xl font-semibold mb-2 text-[#00CDFF]">Year 1 (Foundational Traction)</h4>
+                <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                  <h4 className="text-xl font-semibold mb-2 text-primary">Year 1 (Foundational Traction)</h4>
                   <p>
                     Focus on securing initial high-value custom projects and launching the pilot version of our SaaS platform.
                   </p>
@@ -144,8 +144,8 @@ const Investors = () => {
                   </p>
                 </div>
                 
-                <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                  <h4 className="text-xl font-semibold mb-2 text-[#00CDFF]">Year 2 (Scalable Growth)</h4>
+                <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                  <h4 className="text-xl font-semibold mb-2 text-primary">Year 2 (Scalable Growth)</h4>
                   <p>
                     Significant expansion of the SaaS platform user base and securing repeat custom solution clients.
                   </p>
@@ -155,8 +155,8 @@ const Investors = () => {
                   </p>
                 </div>
                 
-                <div className="bg-[#010C2A]/50 p-6 rounded-lg border-l-4 border-[#00CDFF]">
-                  <h4 className="text-xl font-semibold mb-2 text-[#00CDFF]">Year 3 (Market Dominance & Diversification)</h4>
+                <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                  <h4 className="text-xl font-semibold mb-2 text-primary">Year 3 (Market Dominance & Diversification)</h4>
                   <p>
                     Solidifying market position for our SaaS platform, scaling API access, and undertaking larger, more complex AI integrations.
                   </p>

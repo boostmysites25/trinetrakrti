@@ -34,14 +34,14 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(6, 11).map(({ id, title, link }) => (
+              {services.slice(5, 10).map(({ id, title, link }) => (
                 <Link className="!min-h-fit" to={link} key={id}>
                   {title}
                 </Link>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(12, 16).map(({ id, title, link }) => (
+              {services.slice(10, 16).map(({ id, title, link }) => (
                 <Link className="!min-h-fit" to={link} key={id}>
                   {title}
                 </Link>
@@ -84,10 +84,15 @@ const Footer = () => {
                   alt="location"
                   className="w-[1.5rem] object-contain grayscale"
                 />
-                <span className="max-w-[15rem] text-wrap">
+                <a
+                  href={companyDetails.mapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="max-w-[15rem] text-wrap"
+                >
                   <span className="font-medium">Location:</span>{" "}
                   {companyDetails.location}
-                </span>
+                </a>
               </li>
             </ul>
             <div className="flex items-center gap-4">

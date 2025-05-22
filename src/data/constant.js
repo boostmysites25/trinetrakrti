@@ -47,6 +47,7 @@ export const companyDetails = {
   phone: "+918006800594",
   location: "Gadag,Karanataka and Bangalore, India",
   email: "contact@trinetrakrti.com",
+  mapUrl: "https://maps.app.goo.gl/MHHMdGhxyhCdcnxE9",
 };
 
 // Service Detail Pages
@@ -312,11 +313,11 @@ export const landingPageNavLinks = [
 // Career pages
 export const careerPages = [
   {
-    link: "careers",
-    label: "Careers",
+    link: "/careers",
+    label: "Join Us",
   },
   {
-    link: "internship",
+    link: "/internship",
     label: "Internship",
   },
 ];
@@ -344,11 +345,6 @@ export const websitePagesLinks = [
     ],
   },
   {
-    id: 3,
-    link: "/investors",
-    label: "For Investors",
-  },
-  {
     id: 4,
     link: "/services",
     label: "Services",
@@ -361,9 +357,14 @@ export const websitePagesLinks = [
     label: "Blogs",
   },
   {
+    id: 3,
+    link: "/investors",
+    label: "For Investors",
+  },
+  {
     id: 6,
-    link: "#",
-    label: "Join Us",
+    link: "/careers",
+    label: "Careers",
     subLinks: careerPages,
   },
   {

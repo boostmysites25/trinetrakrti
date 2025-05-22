@@ -12,6 +12,14 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.gkbf4bv0fhlc1747909824626{
+  z-index: 99 !important;
+}
+
+.EZDrawer__container {
+  z-index: 9999 !important;
+}
+
 :root {
   background: #ffffff;
   @apply text-primary;
