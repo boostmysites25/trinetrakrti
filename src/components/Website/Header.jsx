@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed py-2 top-0 z-50 w-full transition-all duration-300 ${
         scrolled
           ? "bg-white/80 backdrop-blur-md shadow-md"
           : "bg-white/50 backdrop-blur-sm"
@@ -56,7 +56,7 @@ const Header = () => {
             alt="logo"
             width="auto"
             height="auto"
-            className="h-[5rem] lg:h-[7rem] object-contain relative z-10"
+            className="h-[3rem] lg:h-[5rem] object-contain relative z-10"
           />
         </Link>
 

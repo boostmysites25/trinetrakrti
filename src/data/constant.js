@@ -53,82 +53,82 @@ export const companyDetails = {
 // Service Detail Pages
 export const serviceDetailPages = [
   {
-    link: "web-development",
+    link: "/services/web-development",
     label: "Web Development",
     component: <WebDevelopment />,
   },
   {
-    link: "app-development",
+    link: "/services/app-development",
     label: "App Development",
     component: <AppDevelopment />,
   },
   {
-    link: "ai-development",
+    link: "/services/ai-development",
     label: "AI Development",
     component: <AIDevelopment />,
   },
   {
-    link: "blockchain-solutions",
+    link: "/services/blockchain-solutions",
     label: "Blockchain Solutions",
     component: <BlockchainSolutions />,
   },
   {
-    link: "cloud-computing-services",
+    link: "/services/cloud-computing-services",
     label: "Cloud Computing Services",
     component: <CloudComputingServices />,
   },
   {
-    link: "game-development",
+    link: "/services/game-development",
     label: "Game Development",
     component: <GameDevelopment />,
   },
   {
-    link: "rpa",
+    link: "/services/rpa",
     label: "Robotic Process Automation",
     component: <RPA />,
   },
   {
-    link: "machine-learning",
+    link: "/services/machine-learning",
     label: "Machine Learning",
     component: <MachineLearning />,
   },
   {
-    link: "data-science",
+    link: "/services/data-science",
     label: "Data Science",
     component: <DataScience />,
   },
   {
-    link: "nlp",
+    link: "/services/nlp",
     label: "Natural Language Processing",
     component: <NLP />,
   },
   {
-    link: "cloud-migration",
+    link: "/services/cloud-migration",
     label: "Cloud Migration",
     component: <CloudMigration />,
   },
   {
-    link: "uiux-design",
+    link: "/services/uiux-design",
     label: "UI/UX Design",
     component: <UIUXDesign />,
   },
   {
-    link: "ai-bot-subscription",
+    link: "/services/ai-bot-subscription",
     label: "AI Bot Subscription",
     component: <AIBotSubscription />,
   },
   {
-    link: "custom-software-development",
+    link: "/services/custom-software-development",
     label: "Custom Software Development",
     component: <CustomSoftwareDevelopment />,
   },
   {
-    link: "custom-logo-design",
+    link: "/services/custom-logo-design",
     label: "Custom Logo Design",
     component: <CustomLogoDesign />,
   },
   {
-    link: "consulting",
+    link: "/services/consulting",
     label: "IT Consulting",
     component: <Consulting />,
   },

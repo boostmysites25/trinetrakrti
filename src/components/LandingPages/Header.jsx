@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <div className="fixed top-0 z-50 w-full bg-white/50 backdrop-blur-sm text-primary">
+    <div className="fixed py-2 top-0 z-50 w-full bg-white/50 backdrop-blur-sm text-primary">
       <div className="flex wrapper items-center gap-8 justify-between">
         <ReactScrollLink
           to="banner"
@@ -24,7 +24,7 @@ const Header = () => {
             alt="logo"
             width="auto"
             height="auto"
-            className="h-[5rem] lg:h-[7rem] object-contain"
+            className="h-[3rem] lg:h-[5rem] object-contain"
           />
         </ReactScrollLink>
         <div className="hidden lg:flex items-center gap-10">
