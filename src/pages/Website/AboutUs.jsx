@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Website/Header";
 import banner from "../../assets/images/about-us-page-banner.webp";
+import linktrQR from "../../assets/images/linktr-qr.png";
 
 import img1 from "../../assets/images/about-us-page-2.png";
 import img2 from "../../assets/images/about-us-page-3.png";
@@ -228,6 +229,42 @@ const AboutUs = () => {
           more.
         </p>
       </section>
+      
+      {/* Connect with Us QR Section */}
+      <section className="wrapper py-16">
+        <div className="text-center">
+          <div data-aos="fade-up" className="ai-decorative-line w-fit mx-auto">
+            <h6 className="font-medium text-secondary capitalize">
+              Stay Connected
+            </h6>
+          </div>
+          <h2 data-aos="fade-up" className="heading mt-5 mb-6">
+            Follow Our Journey
+          </h2>
+          <p data-aos="fade-up" className="max-w-2xl mx-auto mb-8 text-gray-700">
+            Stay updated with our latest innovations, insights, and company news. 
+            Scan the QR code to connect with us on all social platforms.
+          </p>
+          
+          <div data-aos="fade-up" className="flex justify-center">
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 max-w-xs">
+              <div className="w-24 h-24 mx-auto mb-4 p-2 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-xl">
+                <img
+                  loading="lazy"
+                  src={linktrQR}
+                  alt="Connect with TrinetraKrti on all platforms"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Quick Connect</h3>
+              <p className="text-sm text-gray-600">
+                Scan to access all our social links
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <SolveITNeeds />
       <Footer />
     </div>

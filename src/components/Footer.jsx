@@ -4,14 +4,15 @@ import logo from "../assets/images/logo/logo1.png";
 import emailIcon from "../assets/images/icons/email.png";
 import phoneIcon from "../assets/images/icons/phone.png";
 import locationIcon from "../assets/images/icons/location.png";
+import linktrQR from "../assets/images/linktr-qr.png";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
+  FaYoutube,
 } from "react-icons/fa";
-import { companyDetails, services } from "../data/constant";
+import { companyDetails, serviceDetailPages } from "../data/constant";
 
 const Footer = () => {
   return (
@@ -27,23 +28,23 @@ const Footer = () => {
           <h6 className="text-lg font-medium">Our Services</h6>
           <div className="flex sm:flex-row flex-col gap-2 sm:gap-4 text-md">
             <div className="flex flex-col gap-2">
-              {services.slice(0, 5).map(({ id, title, link }) => (
-                <Link className="!min-h-fit" to={link} key={id}>
-                  {title}
+              {serviceDetailPages.slice(0, 5).map(({ label, link }) => (
+                <Link className="!min-h-fit" to={link} key={label}>
+                  {label}
                 </Link>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(5, 10).map(({ id, title, link }) => (
-                <Link className="!min-h-fit" to={link} key={id}>
-                  {title}
+              {serviceDetailPages.slice(5, 10).map(({ label, link }) => (
+                <Link className="!min-h-fit" to={link} key={label}>
+                  {label}
                 </Link>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {services.slice(10, 16).map(({ id, title, link }) => (
-                <Link className="!min-h-fit" to={link} key={id}>
-                  {title}
+              {serviceDetailPages.slice(10, 16).map(({ label, link }) => (
+                <Link className="!min-h-fit" to={link} key={label}>
+                  {label}
                 </Link>
               ))}
             </div>
@@ -90,24 +91,64 @@ const Footer = () => {
                   rel="noreferrer"
                   className="max-w-[15rem] text-wrap"
                 >
-                  <span className="font-medium">Location:</span>{" "}
-                  {companyDetails.location}
+                  <span className="font-medium">
+                    Location:{" "}
+                    <span className="font-normal">
+                      {companyDetails.location}
+                    </span>
+                  </span>
                 </a>
               </li>
             </ul>
             <div className="flex items-center gap-4">
-              <Link className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300">
+              <Link
+                to={companyDetails.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300"
+              >
                 <FaFacebookF />
               </Link>
-              <Link className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300">
+              <Link
+                to={companyDetails.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300"
+              >
                 <FaInstagram />
               </Link>
-              <Link className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300">
+              <Link
+                to={companyDetails.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300"
+              >
                 <FaLinkedin />
               </Link>
-              <Link className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300">
-                <FaTwitter />
+              <Link
+                to={companyDetails.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary/10 text-primary/70 w-[2.5rem] h-[2.5rem] rounded-full flex justify-center items-center text-2xl hover:bg-gradient-to-r hover:text-primary hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaYoutube />
               </Link>
+            </div>
+            
+            {/* Linktree QR Code */}
+            <div className="mt-6 flex flex-col items-center gap-2">
+              <h6 className="text-sm font-medium text-gray-600">Connect with us</h6>
+              <div className="bg-white p-2 rounded-lg shadow-md">
+                <img
+                  loading="lazy"
+                  src={linktrQR}
+                  alt="Scan to connect with TrinetraKrti on all platforms"
+                  className="w-[6rem] h-[6rem] object-contain"
+                />
+              </div>
+              <p className="text-xs text-gray-500 text-center max-w-[8rem]">
+                Scan QR code to access all our social links
+              </p>
             </div>
           </div>
         </div>

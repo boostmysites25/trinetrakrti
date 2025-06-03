@@ -6,6 +6,7 @@ import Testimonials from "../../components/Testimonials";
 import AssociatedWith from "../../components/AssociatedWith";
 import Footer from "../../components/Footer";
 import LeadForm from "../../components/LeadForm";
+import linktrQR from "../../assets/images/linktr-qr.png";
 
 import {
   companyDetails,
@@ -552,6 +553,59 @@ const Home = () => {
 
           {/* Partners & Clients */}
           <AssociatedWith />
+
+          {/* Connect with Us QR Section */}
+          <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] relative overflow-hidden">
+            <div className="absolute inset-0 ai-dots-bg opacity-10"></div>
+            <div className="wrapper">
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <div className="ai-decorative-line mx-auto">
+                    <h2 className="font-medium text-secondary ai-gradient-text">
+                      Stay Connected
+                    </h2>
+                  </div>
+                </div>
+                <h2 className="heading mt-4 mb-6">
+                  Connect with Us on All Platforms
+                </h2>
+                <p className="max-w-2xl mx-auto mb-8 text-gray-700">
+                  Scan the QR code below to quickly access all our social media platforms, 
+                  latest updates, and connect with our community.
+                </p>
+                
+                <div className="flex justify-center">
+                  <div className="ai-card p-8 bg-white shadow-lg max-w-sm mx-auto ai-reveal">
+                    <div className="text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 p-3 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-2xl">
+                        <img
+                          loading="lazy"
+                          src={linktrQR}
+                          alt="Scan to connect with TrinetraKrti on all platforms"
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <h3 className="font-semibold text-lg mb-2">Quick Connect</h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        Scan with your phone camera to access all our social links
+                      </p>
+                      <div className="flex justify-center gap-2">
+                        <span className="px-3 py-1 bg-[#C7AC5F20] text-[#C7AC5F] text-xs rounded-full">
+                          LinkedIn
+                        </span>
+                        <span className="px-3 py-1 bg-[#C7AC5F20] text-[#C7AC5F] text-xs rounded-full">
+                          Instagram
+                        </span>
+                        <span className="px-3 py-1 bg-[#C7AC5F20] text-[#C7AC5F] text-xs rounded-full">
+                          YouTube
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* FAQ Section */}
           {/* <section className="py-16 relative overflow-hidden">

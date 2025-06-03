@@ -40,18 +40,38 @@ const CustomLogoDesign = lazy(() =>
   import("../pages/Website/Services/CustomLogoDesign")
 );
 const Consulting = lazy(() => import("../pages/Website/Services/Consulting"));
+const IOT = lazy(() => import("../pages/Website/Services/IOT"));
+const ARVR = lazy(() => import("../pages/Website/Services/ARVR"));
+const GenerativeAISolutions = lazy(() =>
+  import("../pages/Website/Services/GenerativeAISolutions")
+);
 
 // details
 export const companyDetails = {
   logo: logoImg,
   phone: "+918006800594",
-  location: "Gadag,Karanataka and Bangalore, India",
+  location: "HQ - Gadag, Karnataka & Bangalore, India",
   email: "contact@trinetrakrti.com",
   mapUrl: "https://maps.app.goo.gl/MHHMdGhxyhCdcnxE9",
+  linkedin:"https://www.linkedin.com/company/trinetrakrti",
+  instagram:"https://www.instagram.com/trinetrakrti/?hl=en",
+  facebook:"https://business.facebook.com/latest/home?nav_ref=bm_home_redirect&business_id=1040057314739146&asset_id=630363506831675",
+  whatsapp:"https://wa.me/918006800594",
+  youtube:"https://www.youtube.com/channel/UCxPfKhWuAn2uPgn8oBYUQyw"
 };
 
 // Service Detail Pages
 export const serviceDetailPages = [
+  {
+    link: "/services/custom-logo-design",
+    label: "Custom Logo Design",
+    component: <CustomLogoDesign />,
+  },
+  {
+    link: "/services/uiux-design",
+    label: "UI/UX Design",
+    component: <UIUXDesign />,
+  },
   {
     link: "/services/web-development",
     label: "Web Development",
@@ -63,34 +83,9 @@ export const serviceDetailPages = [
     component: <AppDevelopment />,
   },
   {
-    link: "/services/ai-development",
-    label: "AI Development",
-    component: <AIDevelopment />,
-  },
-  {
-    link: "/services/blockchain-solutions",
-    label: "Blockchain Solutions",
-    component: <BlockchainSolutions />,
-  },
-  {
-    link: "/services/cloud-computing-services",
-    label: "Cloud Computing Services",
-    component: <CloudComputingServices />,
-  },
-  {
-    link: "/services/game-development",
-    label: "Game Development",
-    component: <GameDevelopment />,
-  },
-  {
-    link: "/services/rpa",
-    label: "Robotic Process Automation",
-    component: <RPA />,
-  },
-  {
-    link: "/services/machine-learning",
-    label: "Machine Learning",
-    component: <MachineLearning />,
+    link: "/services/custom-software-development",
+    label: "Custom Software Development",
+    component: <CustomSoftwareDevelopment />,
   },
   {
     link: "/services/data-science",
@@ -98,19 +93,24 @@ export const serviceDetailPages = [
     component: <DataScience />,
   },
   {
-    link: "/services/nlp",
-    label: "Natural Language Processing",
-    component: <NLP />,
+    link: "/services/cloud-computing-services",
+    label: "Cloud Computing Services",
+    component: <CloudComputingServices />,
   },
   {
-    link: "/services/cloud-migration",
-    label: "Cloud Migration",
-    component: <CloudMigration />,
+    link: "/services/iot",
+    label: "Internet of Things (IoT)",
+    component: <IOT />,
   },
   {
-    link: "/services/uiux-design",
-    label: "UI/UX Design",
-    component: <UIUXDesign />,
+    link: "/services/ar-vr",
+    label: "AR/VR",
+    component: <ARVR />,
+  },
+  {
+    link: "/services/game-development",
+    label: "Game Development",
+    component: <GameDevelopment />,
   },
   {
     link: "/services/ai-bot-subscription",
@@ -118,14 +118,19 @@ export const serviceDetailPages = [
     component: <AIBotSubscription />,
   },
   {
-    link: "/services/custom-software-development",
-    label: "Custom Software Development",
-    component: <CustomSoftwareDevelopment />,
+    link: "/services/ai-development",
+    label: "AI Development",
+    component: <AIDevelopment />,
   },
   {
-    link: "/services/custom-logo-design",
-    label: "Custom Logo Design",
-    component: <CustomLogoDesign />,
+    link: "/services/generative-ai",
+    label: "Generative AI Solutions",
+    component: <GenerativeAISolutions />,
+  },
+  {
+    link: "/services/blockchain-solutions",
+    label: "Blockchain Solutions",
+    component: <BlockchainSolutions />,
   },
   {
     link: "/services/consulting",
@@ -279,6 +284,33 @@ export const services = [
     description:
       "Navigate the complex technology landscape with our expert IT consulting services. We provide strategic guidance to help you leverage technology for growth, innovation, and competitive advantage.",
     link: "/services/consulting",
+  },
+  {
+    id: 17,
+    title: "Internet of Things (IoT)",
+    icon: require("../assets/images/icons/ai.png"), // Using AI icon as placeholder
+    image: require("../assets/images/services-details/ai1.jpg"),
+    description:
+      "Connect and automate your business with our comprehensive IoT solutions. We develop smart systems that collect, analyze, and act on real-time data to optimize operations and enhance user experiences.",
+    link: "/services/iot",
+  },
+  {
+    id: 18,
+    title: "AR/VR Solutions",
+    icon: require("../assets/images/icons/arvr.png"),
+    image: require("../assets/images/services-details/game1.webp"),
+    description:
+      "Immerse your audience in cutting-edge AR/VR experiences. We create interactive virtual environments and augmented reality applications that transform how users engage with your products and services.",
+    link: "/services/ar-vr",
+  },
+  {
+    id: 19,
+    title: "Generative AI Solutions",
+    icon: require("../assets/images/icons/ai.png"),
+    image: require("../assets/images/services-details/ai1.jpg"),
+    description:
+      "Harness the power of generative AI to automate content creation, enhance creativity, and drive innovation. Our custom AI solutions generate text, images, code, and multimedia content at scale.",
+    link: "/services/generative-ai",
   },
 ];
 

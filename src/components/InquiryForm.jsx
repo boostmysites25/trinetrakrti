@@ -56,7 +56,6 @@ const InquiryForm = () => {
         if (res.error) {
           toast.error(res.error);
         } else {
-          toast.success("Email sent successfully");
           reset();
           navigate("/thank-you");
         }

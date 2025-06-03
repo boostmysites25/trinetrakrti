@@ -52,7 +52,6 @@ const LeadForm = () => {
     )
       .then((response) => response.json())
       .then(() => {
-        toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
       })
