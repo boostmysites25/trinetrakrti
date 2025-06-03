@@ -577,7 +577,7 @@ const Home = () => {
                 <div className="flex justify-center">
                   <div className="ai-card p-8 bg-white shadow-lg max-w-sm mx-auto ai-reveal">
                     <div className="text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 p-3 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-2xl">
+                      <div className="w-48 h-48 mx-auto mb-4 p-3 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-2xl">
                         <img
                           loading="lazy"
                           src={linktrQR}
@@ -606,122 +606,9 @@ const Home = () => {
               </div>
             </div>
           </section>
-
-          {/* FAQ Section */}
-          {/* <section className="py-16 relative overflow-hidden">
-            <div className="absolute inset-0 ai-dots-bg opacity-10"></div>
-            <div className="wrapper">
-              <div className="text-center mb-10">
-                <div className="ai-decorative-line mx-auto">
-                  <h2 className="font-medium text-secondary ai-gradient-text">Frequently Asked Questions</h2>
-                </div>
-                <h2 className="heading mt-4">Common Questions About AI Solutions</h2>
-                <p className="max-w-3xl mx-auto mt-4 text-gray-700">
-                  Get answers to the most common questions about our AI development services
-                </p>
-              </div>
-              
-              <div className="max-w-4xl mx-auto">
-                {[
-                  {
-                    q: "How can AI benefit my business?",
-                    a: "AI can automate repetitive tasks, analyze large datasets to uncover insights, enhance customer experiences through personalization, optimize operations, and help make data-driven decisions that drive growth and efficiency."
-                  },
-                  {
-                    q: "How long does it take to develop a custom AI solution?",
-                    a: "The timeline varies depending on the complexity of the project, but typically ranges from 2-6 months. We follow an agile development approach that allows for early prototyping and iterative improvements."
-                  },
-                  {
-                    q: "Do I need large amounts of data to implement AI?",
-                    a: "While having quality data is important, we can work with various data scenarios. For organizations with limited data, we can implement transfer learning techniques, synthetic data generation, or start with smaller, focused AI applications that grow as you collect more data."
-                  },
-                  {
-                    q: "How do you ensure the security of AI applications?",
-                    a: "We implement robust security measures throughout the development process, including data encryption, secure APIs, regular security audits, and compliance with industry standards and regulations like GDPR, HIPAA, or SOC 2 as required."
-                  }
-                ].map((faq, index) => (
-                  <div 
-                    key={index}
-                    className="mb-6 ai-card p-6 ai-reveal"
-                    style={{animationDelay: `${index * 0.2}s`}}
-                    itemScope itemType="https://schema.org/Question"
-                  >
-                    <h3 
-                      className="font-semibold text-lg flex items-center gap-2 mb-3"
-                      itemProp="name"
-                    >
-                      <span className="text-[#C7AC5F]">Q:</span> {faq.q}
-                    </h3>
-                    <div itemScope itemType="https://schema.org/Answer">
-                      <p 
-                        className="text-gray-700 pl-6 border-l-2 border-[#C7AC5F30]"
-                        itemProp="text"
-                      >
-                        {faq.a}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="text-center mt-10">
-                <Link 
-                  to="/contact" 
-                  className="ai-button group px-6 py-3"
-                  aria-label="Contact us with your questions"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Have More Questions? Contact Us
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                    </svg>
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </section> */}
-
-          {/* CTA Section */}
-          {/* <section className="py-16 bg-gradient-to-r from-[#010C2A] to-[#0A1A40] text-white relative overflow-hidden">
-            <div className="absolute inset-0 circuit-bg opacity-10"></div>
-            <div className="wrapper text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-              <p className="max-w-2xl mx-auto mb-8 text-white/80">
-                Partner with TrinetraKrti to leverage the power of artificial intelligence and stay ahead in today's competitive landscape.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link 
-                  to="/contact" 
-                  className="px-8 py-3 bg-[#C7AC5F] text-white rounded-md hover:bg-[#C7AC5F]/80 transition-all duration-300 flex items-center gap-2"
-                >
-                  <span>Start Your AI Journey</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-                </Link>
-                <Link 
-                  to="/services" 
-                  className="px-8 py-3 border border-white/30 text-white rounded-md hover:bg-white/10 transition-all duration-300"
-                >
-                  Explore Our Services
-                </Link>
-              </div>
-            </div>
-          </section> */}
         </main>
 
         <Footer />
-
-        {/* Back to top button */}
-        {/* <button 
-          onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-          className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#C7AC5F] text-white flex items-center justify-center shadow-lg hover:bg-[#C7AC5F]/80 transition-all duration-300 z-50"
-          aria-label="Back to top"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button> */}
       </div>
     </>
   );

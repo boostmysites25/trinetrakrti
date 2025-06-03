@@ -84,7 +84,7 @@ const Header = () => {
               {item?.subLinks && (
                 <div
                   className={`absolute text-sm top-[3rem] transition-all duration-200 bg-white rounded-sm grid gap-2 invisible peer-hover:visible hover:visible overflow-hidden shadow-lg p-2 ${
-                    item.subLinks.length >= 4 ? "grid-cols-2 w-[32rem] left-[-22rem]" : "grid-cols-1 w-[14rem] left-[-6rem]"
+                    item.subLinks.length >= 4 ? "grid-cols-3 w-[50rem] left-[-22rem]" : "grid-cols-1 w-[14rem] left-[-6rem]"
                   }`}
                 >
                   {item.subLinks.map(({ link, label }) => (

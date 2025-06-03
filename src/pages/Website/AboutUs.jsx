@@ -248,7 +248,7 @@ const AboutUs = () => {
           
           <div data-aos="fade-up" className="flex justify-center">
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 max-w-xs">
-              <div className="w-24 h-24 mx-auto mb-4 p-2 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-xl">
+              <div className="w-48 h-48 mx-auto mb-4 p-2 bg-gradient-to-br from-[#C7AC5F20] to-[#C7AC5F10] rounded-xl">
                 <img
                   loading="lazy"
                   src={linktrQR}

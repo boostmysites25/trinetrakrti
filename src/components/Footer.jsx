@@ -89,11 +89,11 @@ const Footer = () => {
                   href={companyDetails.mapUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="max-w-[15rem] text-wrap"
+                  className="max-w-[20rem] text-wrap"
                 >
                   <span className="font-medium">
                     Location:{" "}
-                    <span className="font-normal">
+                    <span className="font-normal whitespace-pre-line">
                       {companyDetails.location}
                     </span>
                   </span>
@@ -143,7 +143,7 @@ const Footer = () => {
                   loading="lazy"
                   src={linktrQR}
                   alt="Scan to connect with TrinetraKrti on all platforms"
-                  className="w-[6rem] h-[6rem] object-contain"
+                  className="w-[8rem] h-[8rem] object-contain"
                 />
               </div>
               <p className="text-xs text-gray-500 text-center max-w-[8rem]">

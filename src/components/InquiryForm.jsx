@@ -205,7 +205,7 @@ const InquiryForm = () => {
             <button
               disabled={isSubmitting}
               type="submit"
-              className="px-4 py-3 text-white bg-secondary rounded-sm w-full max-w-[50%]"
+              className="px-4 py-3 text-white bg-secondary rounded-sm w-full flex justify-center sm:max-w-[50%]"
             >
               Send Message
             </button>

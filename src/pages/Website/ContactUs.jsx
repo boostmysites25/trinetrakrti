@@ -44,8 +44,8 @@ const ContactUs = () => {
       </div>
 
       <section className="wrapper py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7 lg:gap-5">
-          <div className="sm:col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-7 lg:gap-5">
+          <div className="sm:col-span-2 md:col-span-3 lg:col-span-3 flex flex-col gap-3">
             <div data-aos="fade-up" className="ai-decorative-line relative z-10">
                 <h2 className="font-medium text-secondary ai-gradient-text">Contact Us</h2>
               </div>
@@ -61,7 +61,7 @@ const ContactUs = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col"
+            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col items-center"
           >
             <div className="text-secondary flex items-center justify-center group-hover:bg-white h-[4rem] w-[4rem] rounded-full bg-primary/5 text-4xl">
               <PiPhoneCallLight />
@@ -76,7 +76,7 @@ const ContactUs = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col"
+            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col items-center"
           >
             <div className="text-secondary flex items-center justify-center group-hover:bg-white h-[4rem] w-[4rem] rounded-full bg-primary/5 text-4xl">
               <PiEnvelopeLight />
@@ -91,7 +91,7 @@ const ContactUs = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col"
+            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col items-center"
           >
             <div className="text-secondary flex items-center justify-center group-hover:bg-white h-[4rem] w-[4rem] rounded-full bg-primary/5 text-4xl">
               <PiMapPinAreaLight />
@@ -100,13 +100,13 @@ const ContactUs = () => {
             <span className="relative z-10 group-hover:text-white font-semibold mt-4">
               Location
             </span>
-            <span className="relative z-10 group-hover:text-white mt-2">
+            <span className="relative z-10 group-hover:text-white mt-2 whitespace-pre-line">
               {companyDetails.location}
             </span>
           </div>
           <div
             data-aos="fade-up"
-            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col items-center"
+            className="rounded-md relative bg-primary/5 group hover:bg-primary p-7 border-t-2 border-secondary flex flex-col items-center items-center lg:col-span-3 lg:w-2/4 w-full mx-auto"
           >
             <div className="text-secondary flex items-center justify-center group-hover:bg-white h-[4rem] w-[4rem] rounded-full bg-primary/5 text-4xl">
               <FaQrcode />
@@ -120,7 +120,7 @@ const ContactUs = () => {
                 loading="lazy"
                 src={linktrQR}
                 alt="Scan to connect with TrinetraKrti"
-                className="w-[4rem] h-[4rem] object-contain"
+                className="w-48 h-48 object-contain"
               />
             </div>
             <span className="relative z-10 group-hover:text-white mt-2 text-xs text-center">

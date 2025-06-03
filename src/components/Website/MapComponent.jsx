@@ -43,9 +43,7 @@ const MapComponent = () => {
       zoomControl
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={location}>
-        <Popup>{companyDetails.location}</Popup>
-      </Marker>
+      <Marker position={location}></Marker>
     </MapContainer>
   );
 };

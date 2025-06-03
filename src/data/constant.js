@@ -50,7 +50,7 @@ const GenerativeAISolutions = lazy(() =>
 export const companyDetails = {
   logo: logoImg,
   phone: "+918006800594",
-  location: "HQ - Gadag, Karnataka & Bangalore, India",
+  location: "HQ - Gadag, Karnataka \n Bangalore, India",
   email: "contact@trinetrakrti.com",
   mapUrl: "https://maps.app.goo.gl/MHHMdGhxyhCdcnxE9",
   linkedin:"https://www.linkedin.com/company/trinetrakrti",
