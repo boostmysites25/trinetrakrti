@@ -40,7 +40,7 @@ const internshipListings = [
     title: "Logo Design Intern",
     location: "Bangalore, India",
     duration: "3 months",
-    stipend: "₹15,000/month",
+    stipend: "Competitive",
     description:
       "Learn brand identity design and create compelling logos while working with experienced designers.",
     requirements: [
@@ -57,7 +57,7 @@ const internshipListings = [
     title: "UI/UX Design Intern",
     location: "Remote",
     duration: "3-4 months",
-    stipend: "₹18,000/month",
+    stipend: "Competitive",
     description:
       "Learn user experience design principles and create intuitive interfaces for web and mobile applications.",
     requirements: [
@@ -74,7 +74,7 @@ const internshipListings = [
     title: "Web Development Intern",
     location: "Remote",
     duration: "3-4 months",
-    stipend: "₹20,000/month",
+    stipend: "Competitive",
     description:
       "Gain hands-on experience in modern web development using React.js, Node.js, and other cutting-edge technologies.",
     requirements: [
@@ -91,7 +91,7 @@ const internshipListings = [
     title: "Mobile App Development Intern",
     location: "Bangalore, India",
     duration: "4 months",
-    stipend: "₹22,000/month",
+    stipend: "Competitive",
     description:
       "Learn mobile app development for iOS and Android platforms using React Native or Flutter.",
     requirements: [
@@ -108,7 +108,7 @@ const internshipListings = [
     title: "Software Development Intern",
     location: "Remote",
     duration: "4-6 months",
-    stipend: "₹25,000/month",
+    stipend: "Competitive",
     description:
       "Work on custom software projects and learn enterprise-level software development practices.",
     requirements: [
@@ -125,7 +125,7 @@ const internshipListings = [
     title: "Data Science Intern",
     location: "Remote",
     duration: "4-6 months",
-    stipend: "₹20,000/month",
+    stipend: "Competitive",
     description:
       "Work with data scientists to analyze complex datasets and build predictive models using machine learning.",
     requirements: [
@@ -142,7 +142,7 @@ const internshipListings = [
     title: "Cloud Computing Intern",
     location: "Bangalore, India",
     duration: "3-4 months",
-    stipend: "₹18,000/month",
+    stipend: "Competitive",
     description:
       "Learn cloud technologies and assist in implementing cloud solutions using AWS, Azure, or Google Cloud.",
     requirements: [
@@ -159,7 +159,7 @@ const internshipListings = [
     title: "IoT Development Intern",
     location: "Bangalore, India",
     duration: "4 months",
-    stipend: "₹20,000/month",
+    stipend: "Competitive",
     description:
       "Learn Internet of Things development and work on smart device integration projects.",
     requirements: [
@@ -176,7 +176,7 @@ const internshipListings = [
     title: "AR/VR Development Intern",
     location: "Remote",
     duration: "4-5 months",
-    stipend: "₹22,000/month",
+    stipend: "Competitive",
     description:
       "Explore augmented and virtual reality development using Unity 3D and create immersive experiences.",
     requirements: [
@@ -193,7 +193,7 @@ const internshipListings = [
     title: "Game Development Intern",
     location: "Bangalore, India",
     duration: "4-6 months",
-    stipend: "₹20,000/month",
+    stipend: "Competitive",
     description:
       "Learn game development using Unity 3D or Unreal Engine and contribute to exciting gaming projects.",
     requirements: [
@@ -210,7 +210,7 @@ const internshipListings = [
     title: "AI Chatbot Development Intern",
     location: "Remote",
     duration: "3-4 months",
-    stipend: "₹18,000/month",
+    stipend: "Competitive",
     description:
       "Learn to develop intelligent chatbots and conversational AI systems for various business applications.",
     requirements: [
@@ -227,7 +227,7 @@ const internshipListings = [
     title: "AI Research Intern",
     location: "Bangalore, India",
     duration: "4-6 months",
-    stipend: "₹25,000/month",
+    stipend: "Competitive",
     description:
       "Join our AI research team to work on cutting-edge machine learning and deep learning projects.",
     requirements: [
@@ -244,7 +244,7 @@ const internshipListings = [
     title: "Generative AI Intern",
     location: "Remote",
     duration: "4-5 months",
-    stipend: "₹22,000/month",
+    stipend: "Competitive",
     description:
       "Explore generative AI technologies and work on innovative content generation projects.",
     requirements: [
@@ -261,7 +261,7 @@ const internshipListings = [
     title: "Blockchain Development Intern",
     location: "Bangalore, India",
     duration: "4 months",
-    stipend: "₹20,000/month",
+    stipend: "Competitive",
     description:
       "Learn blockchain technology and smart contract development while working on decentralized applications.",
     requirements: [
@@ -278,7 +278,7 @@ const internshipListings = [
     title: "IT Consulting Intern",
     location: "Bangalore, India",
     duration: "3-4 months",
-    stipend: "₹15,000/month",
+    stipend: "Competitive",
     description:
       "Learn IT consulting practices and assist in technology strategy development for various clients.",
     requirements: [

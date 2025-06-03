@@ -25,6 +25,7 @@ import {
   FaBrain,
   FaLink,
   FaLightbulb,
+  FaDollarSign,
 } from "react-icons/fa";
 import { MdClose, MdLocationOn, MdWorkOutline } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
@@ -42,6 +43,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "2-4 years",
+    salary: "Competitive",
     description:
       "Create compelling brand identities and custom logos that resonate with target audiences and reflect brand essence.",
     requirements: [
@@ -59,6 +61,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Design intuitive and engaging user experiences for web and mobile applications, focusing on user-centered design principles.",
     requirements: [
@@ -76,6 +79,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Develop responsive and scalable web applications using modern frameworks and technologies.",
     requirements: [
@@ -93,6 +97,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Build native and cross-platform mobile applications for iOS and Android platforms.",
     requirements: [
@@ -110,6 +115,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "4-6 years",
+    salary: "Competitive",
     description:
       "Design and develop custom software solutions tailored to specific business requirements and industry needs.",
     requirements: [
@@ -127,6 +133,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Extract valuable insights from complex datasets and develop predictive models to drive business decisions.",
     requirements: [
@@ -144,6 +151,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "4-7 years",
+    salary: "Competitive",
     description:
       "Design and implement scalable cloud infrastructure solutions using AWS, Azure, or Google Cloud platforms.",
     requirements: [
@@ -161,6 +169,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Develop and implement Internet of Things solutions, connecting devices and systems for smart automation.",
     requirements: [
@@ -178,6 +187,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Create immersive augmented and virtual reality experiences using cutting-edge technologies and frameworks.",
     requirements: [
@@ -195,6 +205,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Design and develop engaging games for multiple platforms, from concept to deployment.",
     requirements: [
@@ -212,6 +223,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Develop intelligent chatbots and conversational AI systems for various business applications.",
     requirements: [
@@ -229,6 +241,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "4-6 years",
+    salary: "Competitive",
     description:
       "Develop and deploy artificial intelligence solutions including machine learning models and neural networks.",
     requirements: [
@@ -246,6 +259,7 @@ const jobListings = [
     location: "Remote",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Work with cutting-edge generative AI technologies to create innovative content generation solutions.",
     requirements: [
@@ -263,6 +277,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "3-5 years",
+    salary: "Competitive",
     description:
       "Develop secure and scalable blockchain solutions and smart contracts for various applications.",
     requirements: [
@@ -280,6 +295,7 @@ const jobListings = [
     location: "Bangalore, India",
     type: "Full-time",
     experience: "5-8 years",
+    salary: "Competitive",
     description:
       "Provide strategic technology guidance to help organizations leverage technology for growth and innovation.",
     requirements: [
@@ -521,6 +537,10 @@ const Careers = () => {
                         <div className="flex items-center gap-1">
                           <BsClockHistory />
                           <span>{job.experience}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <FaDollarSign />
+                          <span>{job.salary}</span>
                         </div>
                       </div>
                     </div>
