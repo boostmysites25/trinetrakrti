@@ -134,22 +134,6 @@ const Footer = () => {
                 <FaYoutube />
               </Link>
             </div>
-            
-            {/* Linktree QR Code */}
-            <div className="mt-6 flex flex-col items-center gap-2">
-              <h6 className="text-sm font-medium text-gray-600">Connect with us</h6>
-              <div className="bg-white p-2 rounded-lg shadow-md">
-                <img
-                  loading="lazy"
-                  src={linktrQR}
-                  alt="Scan to connect with TrinetraKrti on all platforms"
-                  className="w-[8rem] h-[8rem] object-contain"
-                />
-              </div>
-              <p className="text-xs text-gray-500 text-center max-w-[8rem]">
-                Scan QR code to access all our social links
-              </p>
-            </div>
           </div>
         </div>
       </div>
