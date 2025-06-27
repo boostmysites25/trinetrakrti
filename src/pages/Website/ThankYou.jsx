@@ -12,9 +12,9 @@ const ThankYou = () => {
 
       <div className="wrapper pt-48 pb-36 flex flex-col items-center justify-center">
         <h1 className="heading-2 text-center mb-4">Thank You!</h1>
-        <p className="text-gray-700 text-lg text-center mb-8">
-          Your application has been submitted successfully. We will review your
-          application and get back to you soon.
+        <p className="text-gray-700 text-lg text-center mb-8 max-w-4xl">
+          Your message has been submitted successfully. We have sent you a confirmation email.
+          Our team will review your inquiry and get back to you soon.
         </p>
         <Link to="/" className="ai-button px-6 py-3 whitespace-nowrap">
           <span className="relative z-10">Back to Home</span>

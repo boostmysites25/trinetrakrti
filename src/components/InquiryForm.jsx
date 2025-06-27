@@ -33,37 +33,70 @@ const InquiryForm = () => {
     emailBody += "Phone: " + values.phone + "\n\n";
     emailBody += "Message:\n" + values.message;
 
-    // Construct the request payload
-    var payload = {
+    // Construct the request payload for company notification
+    var companyPayload = {
       to: companyDetails.email,
       subject: values.subject,
       body: emailBody,
       name: "TrinetraKrti",
     };
 
-    await fetch(
-      "https://send-mail-redirect-boostmysites.vercel.app/send-email",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    )
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          toast.error(res.error);
-        } else {
-          reset();
-          navigate("/thank-you");
+    try {
+      // Send email to company
+      const companyResponse = await fetch(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(companyPayload),
         }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => setSpinner(false));
+      );
+      
+      const companyResult = await companyResponse.json();
+      
+      if (companyResult.error) {
+        toast.error(companyResult.error);
+        setSpinner(false);
+        return;
+      }
+      
+      // Construct confirmation email to the user
+      var confirmationBody = `Dear ${values.name},\n\n`;
+      confirmationBody += "Thank you for contacting TrinetraKrti. We have received your inquiry and will get back to you shortly.\n\n";
+      confirmationBody += "Here's a summary of your message:\n\n";
+      confirmationBody += `Subject: ${values.subject}\n`;
+      confirmationBody += `Message: ${values.message}\n\n`;
+      confirmationBody += "Best Regards,\nTeam TrinetraKrti";
+      
+      var userPayload = {
+        to: values.email,
+        subject: "Thank you for contacting TrinetraKrti",
+        body: confirmationBody,
+        name: "TrinetraKrti",
+      };
+      
+      // Send confirmation email to user
+      await fetch(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userPayload),
+        }
+      );
+      
+      // Reset form and navigate to thank you page
+      reset();
+      navigate("/thank-you");
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setSpinner(false);
+    }
   };
   return (
     <div className="wrapper">

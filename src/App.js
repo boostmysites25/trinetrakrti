@@ -21,8 +21,6 @@ const Home = React.lazy(() => import("./pages/Website/Home"));
 const ThankYou = React.lazy(() => import("./pages/Website/ThankYou"));
 const AboutUs = React.lazy(() => import("./pages/Website/AboutUs"));
 const OurServices = React.lazy(() => import("./pages/Website/OurServices"));
-const Blogs = React.lazy(() => import("./pages/Website/Blogs"));
-const BlogDetails = React.lazy(() => import("./pages/Website/BlogDetails"));
 const ServicePageLayout = React.lazy(() =>
   import("./components/Website/ServicePageLayout")
 );
@@ -96,8 +94,6 @@ function App() {
               <Route path="/investors" element={<Investors />} />
               <Route path="/services" element={<OurServices />} />
               <Route path="/contact" element={<ContactUs />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blogs/:title" element={<BlogDetails />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/internship" element={<Internship />} />
               <Route path="/thank-you" element={<ThankYou />} />
