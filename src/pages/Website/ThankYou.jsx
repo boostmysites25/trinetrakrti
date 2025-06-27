@@ -3,10 +3,18 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Website/Header";
 import Footer from "../../components/Footer";
 import AIFloatingElements from "../../components/AIFloatingElements";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 const ThankYou = () => {
   return (
     <div className="bg-[#fafafa] relative">
+      <SEOMetaTags 
+        title={seoData.thankYou.title}
+        description={seoData.thankYou.description}
+        keywords={seoData.thankYou.keywords}
+        canonicalUrl={seoData.thankYou.canonicalUrl}
+      />
       <Header />
       <AIFloatingElements count={15} />
 

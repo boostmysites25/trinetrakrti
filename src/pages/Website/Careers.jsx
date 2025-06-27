@@ -6,6 +6,8 @@ import SolveITNeeds from "../../components/Website/SolveITNeeds";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { companyDetails } from "../../data/constant";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 import {
   FaBriefcase,
   FaCode,
@@ -375,6 +377,43 @@ const Careers = () => {
 
       const res = await response.json();
       if (res.success) {
+        // Send confirmation email to the applicant
+        let confirmationBody = `Dear ${values.name},\n`;
+        confirmationBody += "Thank you sincerely for reaching out to us. Your message has been successfully received by the TrinetraKrti team, and we genuinely appreciate you taking the time to connect with us.\n\n";
+        confirmationBody += "Our team is currently reviewing your inquiry with care, and we will be pleased to get in touch with you very soon. We are truly looking forward to understanding your specific needs and exploring how our expertise can help transform your vision into a remarkable digital reality.\n\n";
+        confirmationBody += "While you await our response, please feel free to explore our website at your convenience for a more detailed overview of our comprehensive services and how we can assist you.\n\n";
+        confirmationBody += "Here's a a summary of your \n";
+        confirmationBody += `Position: ${selectedJob.title}\n`;
+        confirmationBody += `Experience: ${values.experience}\n\n`;
+        confirmationBody += "You are always welcome to connect with us directly:\n";
+        confirmationBody += "Website: www.trinetrakrti.com\n";
+        confirmationBody += "Email: contact@trinetrakrti.com\n";
+        confirmationBody += "Call Us: +91 8006 8005 94\n";
+        confirmationBody += "Our Locations:  Gadag  & Bangalore, India\n\n";
+        confirmationBody += "We eagerly anticipate the opportunity to connect with you further.\n\n";
+        confirmationBody += "Warmest regards,\n";
+        confirmationBody += "The TrinetraKrti Team\n";
+        confirmationBody += "[www.trinetrakrti.com]";
+        
+        const userPayload = {
+          to: values.email,
+          subject: "Thank you for applying to TrinetraKrti",
+          body: confirmationBody,
+          name: "TrinetraKrti",
+        };
+        
+        // Send confirmation email to user
+        await fetch(
+          "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userPayload),
+          }
+        );
+        
         toast.success("Application submitted successfully!");
         reset();
         closeModal();
@@ -390,6 +429,12 @@ const Careers = () => {
 
   return (
     <div className="bg-[#fafafa] relative">
+      <SEOMetaTags 
+        title={seoData.careers.title}
+        description={seoData.careers.description}
+        keywords={seoData.careers.keywords}
+        canonicalUrl={seoData.careers.canonicalUrl}
+      />
       <Header />
 
       {/* Floating AI elements for visual enhancement */}

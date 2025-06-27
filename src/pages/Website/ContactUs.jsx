@@ -4,6 +4,8 @@ import linktrQR from "../../assets/images/linktr-qr.png";
 import { Link } from "react-router-dom";
 import Header from "../../components/Website/Header";
 import Footer from "../../components/Footer";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 import SolveITNeeds from "../../components/Website/SolveITNeeds";
 import {
@@ -18,6 +20,14 @@ import InquiryForm from "../../components/InquiryForm";
 
 const ContactUs = () => {
   return (
+    <>
+      <SEOMetaTags 
+        title={seoData.contact.title}
+        description={seoData.contact.description}
+        keywords={seoData.contact.keywords}
+        canonicalUrl={seoData.contact.canonicalUrl}
+      />
+    
     <div className="bg-[#fafafa]">
       <Header />
       <div className="min-h-[45vh] md:min-h-[70vh] w-full page-banner relative">
@@ -140,6 +150,7 @@ const ContactUs = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 

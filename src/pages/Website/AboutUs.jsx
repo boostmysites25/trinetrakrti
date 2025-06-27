@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../components/Website/Header";
 import banner from "../../assets/images/about-us-page-banner.webp";
 import linktrQR from "../../assets/images/linktr-qr.png";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 import img1 from "../../assets/images/about-us-page-2.png";
 import img2 from "../../assets/images/about-us-page-3.png";
@@ -20,6 +22,12 @@ import { services } from "../../data/constant";
 const AboutUs = () => {
   return (
     <div className="landing-bg">
+      <SEOMetaTags 
+        title={seoData.aboutUs.title}
+        description={seoData.aboutUs.description}
+        keywords={seoData.aboutUs.keywords}
+        canonicalUrl={seoData.aboutUs.canonicalUrl}
+      />
       <Header />
       <div data-aos="fade-down" className="h-[50vh] md:h-[60vh]">
         <img

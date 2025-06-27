@@ -4,11 +4,20 @@ import img2 from "../../../assets/images/services-details/app-development2.jpg";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { services } from "../../../data/constant";
+import SEOMetaTags from "../../../components/SEOMetaTags";
+import { seoData } from "../../../data/seoData";
 
 const AppDevelopment = () => {
   const next = services[2];
   return (
-    <div className="flex flex-col gap-10">
+    <>
+      <SEOMetaTags 
+        title={seoData.appDevelopment.title}
+        description={seoData.appDevelopment.description}
+        keywords={seoData.appDevelopment.keywords}
+        canonicalUrl={seoData.appDevelopment.canonicalUrl}
+      />
+      <div className="flex flex-col gap-10">
       <img
         loading="lazy"
         data-aos="fade-up"
@@ -135,6 +144,7 @@ const AppDevelopment = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

@@ -6,11 +6,20 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { services } from "../../../data/constant";
 import { FaCode, FaShoppingCart, FaLaptopCode, FaServer } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
+import SEOMetaTags from "../../../components/SEOMetaTags";
+import { seoData } from "../../../data/seoData";
 
 const WebDevelopment = () => {
   const next = services[1];
   return (
-    <div className="flex flex-col gap-10">
+    <>
+      <SEOMetaTags 
+        title={seoData.webDevelopment.title}
+        description={seoData.webDevelopment.description}
+        keywords={seoData.webDevelopment.keywords}
+        canonicalUrl={seoData.webDevelopment.canonicalUrl}
+      />
+      <div className="flex flex-col gap-10">
       <img
         loading="lazy"
         data-aos="fade-up"
@@ -133,6 +142,7 @@ const WebDevelopment = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

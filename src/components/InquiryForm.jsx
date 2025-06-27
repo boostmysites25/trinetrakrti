@@ -63,12 +63,22 @@ const InquiryForm = () => {
       }
       
       // Construct confirmation email to the user
-      var confirmationBody = `Dear ${values.name},\n\n`;
-      confirmationBody += "Thank you for contacting TrinetraKrti. We have received your inquiry and will get back to you shortly.\n\n";
-      confirmationBody += "Here's a summary of your message:\n\n";
+      var confirmationBody = `Dear ${values.name},\n`;
+      confirmationBody += "Thank you sincerely for reaching out to us. Your message has been successfully received by the TrinetraKrti team, and we genuinely appreciate you taking the time to connect with us.\n\n";
+      confirmationBody += "Our team is currently reviewing your inquiry with care, and we will be pleased to get in touch with you very soon. We are truly looking forward to understanding your specific needs and exploring how our expertise can help transform your vision into a remarkable digital reality.\n\n";
+      confirmationBody += "While you await our response, please feel free to explore our website at your convenience for a more detailed overview of our comprehensive services and how we can assist you.\n\n";
+      confirmationBody += "Here's a a summary of your \n";
       confirmationBody += `Subject: ${values.subject}\n`;
       confirmationBody += `Message: ${values.message}\n\n`;
-      confirmationBody += "Best Regards,\nTeam TrinetraKrti";
+      confirmationBody += "You are always welcome to connect with us directly:\n";
+      confirmationBody += "Website: www.trinetrakrti.com\n";
+      confirmationBody += "Email: contact@trinetrakrti.com\n";
+      confirmationBody += "Call Us: +91 8006 8005 94\n";
+      confirmationBody += "Our Locations:  Gadag  & Bangalore, India\n\n";
+      confirmationBody += "We eagerly anticipate the opportunity to connect with you further.\n\n";
+      confirmationBody += "Warmest regards,\n";
+      confirmationBody += "The TrinetraKrti Team\n";
+      confirmationBody += "[www.trinetrakrti.com]";
       
       var userPayload = {
         to: values.email,

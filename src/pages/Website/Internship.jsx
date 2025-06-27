@@ -6,6 +6,8 @@ import SolveITNeeds from "../../components/Website/SolveITNeeds";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { companyDetails } from "../../data/constant";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 import {
   FaGraduationCap,
   FaCode,
@@ -384,6 +386,12 @@ const Internship = () => {
 
   return (
     <div className="bg-[#fafafa] relative">
+      <SEOMetaTags 
+        title={seoData.internship.title}
+        description={seoData.internship.description}
+        keywords={seoData.internship.keywords}
+        canonicalUrl={seoData.internship.canonicalUrl}
+      />
       <Header />
 
       {/* Floating AI elements for visual enhancement */}

@@ -5,10 +5,18 @@ import banner from "../../assets/images/about-us-page-banner.webp";
 import bgShape from "../../assets/images/bg-shape.png";
 import SolveITNeeds from "../../components/Website/SolveITNeeds";
 import Footer from "../../components/Footer";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 const Leadership = () => {
   return (
     <div className="landing-bg">
+      <SEOMetaTags 
+        title={seoData.leadership.title}
+        description={seoData.leadership.description}
+        keywords={seoData.leadership.keywords}
+        canonicalUrl={seoData.leadership.canonicalUrl}
+      />
       <Header />
       <div data-aos="fade-down" className="h-[50vh] md:h-[60vh]">
         <img

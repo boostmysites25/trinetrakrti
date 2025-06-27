@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Experience from "../../components/Experience";
 import Testimonials from "../../components/Testimonials";
@@ -7,6 +6,8 @@ import AssociatedWith from "../../components/AssociatedWith";
 import Footer from "../../components/Footer";
 import LeadForm from "../../components/LeadForm";
 import linktrQR from "../../assets/images/linktr-qr.png";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 import {
   companyDetails,
@@ -49,63 +50,12 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          TrinetraKrti - Leading AI & Software Development Company | Custom AI
-          Solutions
-        </title>
-        <meta
-          name="description"
-          content="TrinetraKrti specializes in AI-powered software development, machine learning solutions, and custom application development. Transform your business with our cutting-edge technology solutions."
-        />
-        <meta
-          name="keywords"
-          content="AI development, artificial intelligence solutions, machine learning, software development, custom applications, digital transformation, TrinetraKrti"
-        />
-        <meta
-          property="og:title"
-          content="TrinetraKrti - Leading AI & Software Development Company"
-        />
-        <meta
-          property="og:description"
-          content="Transform your business with our cutting-edge AI solutions and custom software development services."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://trinetrakrti.com/" />
-        <link rel="canonical" href="https://trinetrakrti.com/" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "TrinetraKrti",
-              "url": "https://trinetrakrti.com/",
-              "logo": "https://trinetrakrti.com/logo.png",
-              "description": "Leading AI & Software Development Company specializing in custom AI solutions and digital transformation.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "${companyDetails.address}",
-                "addressLocality": "${companyDetails.city}",
-                "addressRegion": "${companyDetails.state}",
-                "postalCode": "${companyDetails.zipCode}",
-                "addressCountry": "${companyDetails.country}"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "${companyDetails.phone}",
-                "contactType": "customer service",
-                "email": "${companyDetails.email}"
-              },
-              "sameAs": [
-                "${companyDetails.socialMedia?.facebook || ""}",
-                "${companyDetails.socialMedia?.twitter || ""}",
-                "${companyDetails.socialMedia?.linkedin || ""}",
-                "${companyDetails.socialMedia?.instagram || ""}"
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      <SEOMetaTags 
+        title={seoData.home.title}
+        description={seoData.home.description}
+        keywords={seoData.home.keywords}
+        canonicalUrl={seoData.home.canonicalUrl}
+      />
 
       <div className="landing-bg relative">
         {/* Floating AI elements for visual enhancement */}

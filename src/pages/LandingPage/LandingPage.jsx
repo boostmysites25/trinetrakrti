@@ -13,6 +13,8 @@ import { industriesCompanyServe } from "../../data/constant";
 import WorkFlow from "../../components/WorkFlow";
 import InquiryForm from "../../components/InquiryForm";
 import Portfolio from "../../components/Portfolio";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 const LandingPage = ({ page }) => {
   // Add scroll animation effect for elements with ai-reveal class
@@ -37,8 +39,25 @@ const LandingPage = ({ page }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Determine which SEO data to use based on the page prop
+  const getSeoData = () => {
+    if (page === "web-development") {
+      return seoData.webDevelopmentLanding;
+    } else if (page === "app-development") {
+      return seoData.appDevelopmentLanding;
+    }
+    // Default to web development if no match
+    return seoData.webDevelopmentLanding;
+  };
+
   return (
     <div className="landing-bg ai-gradient-bg">
+      <SEOMetaTags 
+        title={getSeoData().title}
+        description={getSeoData().description}
+        keywords={getSeoData().keywords}
+        canonicalUrl={getSeoData().canonicalUrl}
+      />
       {/* Floating particles for futuristic effect */}
       <div className="fixed inset-0 pointer-events-none z-0">
         {[...Array(5)].map((_, i) => (

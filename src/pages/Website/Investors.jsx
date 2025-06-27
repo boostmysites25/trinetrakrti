@@ -4,10 +4,18 @@ import banner from "../../assets/images/about-us-page-banner.webp";
 import bgShape from "../../assets/images/bg-shape.png";
 import InquiryForm from "../../components/InquiryForm";
 import Footer from "../../components/Footer";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 const Investors = () => {
   return (
     <div className="landing-bg">
+      <SEOMetaTags 
+        title={seoData.investors.title}
+        description={seoData.investors.description}
+        keywords={seoData.investors.keywords}
+        canonicalUrl={seoData.investors.canonicalUrl}
+      />
       <Header />
       <div data-aos="fade-down" className="h-[50vh] md:h-[60vh]">
         <img

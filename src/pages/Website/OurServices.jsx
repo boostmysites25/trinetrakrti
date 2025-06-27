@@ -6,10 +6,18 @@ import ServiceItemCard from "../../components/Website/ServiceItemCard";
 import Footer from "../../components/Footer";
 import Testimonials from "../../components/Testimonials";
 import SolveITNeeds from "../../components/Website/SolveITNeeds";
+import SEOMetaTags from "../../components/SEOMetaTags";
+import { seoData } from "../../data/seoData";
 
 const OurServices = () => {
   return (
     <div className="landing-bg">
+      <SEOMetaTags 
+        title={seoData.services.title}
+        description={seoData.services.description}
+        keywords={seoData.services.keywords}
+        canonicalUrl={seoData.services.canonicalUrl}
+      />
       <Header />
       <div data-aos="fade-down" className="h-[50vh] md:h-[60vh]">
         <img
